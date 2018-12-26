@@ -29,7 +29,7 @@ def extraer_texto():
         os.mkdir(dirindex)
     numeracion = 1
     paginas = numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/')
-    
+    categorias = [' AGUARDIENTE ',' ABSENTA ',' BRANDY ',' COGNAC ',' ARMAGNAC ',' WHYSKY ',' BOURBON ',' GINEBRA ',' RON ',' VODKA ',' TEQUILA']
     for i in range(1,paginas+1):
         soup=BeautifulSoup(abrir_url('https://www.disevil.com/tienda/es/80-licores-y-destilados/?p='+str(i)+"/"),'html.parser')
         
@@ -41,8 +41,8 @@ def extraer_texto():
             
             producto = soup2.find(itemtype="http://schema.org/Product")
             
-            titulo = producto.find(itemprop="name").text
-            print(titulo)
+            titulo = " " + producto.find(itemprop="name").text + " "
+            #print(titulo)
             
             descripcion = producto.find(itemprop="description")
             if(descripcion !=None):
@@ -51,9 +51,9 @@ def extraer_texto():
                 descripcion=""
             precio= producto.find(itemprop="price").text
             
-            print(precio)
+            #print(precio)
             referencia= producto.find(itemprop="sku").text
-            print(referencia)
+            #print(referencia)
             enlace=url
             
             urlImagen=producto.find(itemprop="image")['src']
@@ -67,12 +67,43 @@ def extraer_texto():
             if(urlStock != 'http://schema.org/InStock'):
                 enStock= False
                 
-            print(enStock)
+            #print(enStock)
                 
             #for description in producto.find_all(class_='rte'):
+            categoria = None
+            for cat in categorias:
+                if cat in titulo:
+                    categoria=cat
+                    break
+            if(categoria== None):
+                if ' GIN ' in titulo:
+                    categoria = ' GINEBRA '
+                else:
+                    categoria='OTROS LICORES'        
+            #print(categoria)
+            
+            
+            descripcion2 = producto.find(class_='page-product-box').text
+            if(descripcion2.isspace()):
+                volumen =  descripcion2.split('Bot')[1]
+                volumen.replace(" ",".")
+                volumen = volumen.split(".")[1]
+            
+                descripcion2 ="No hay descripción"
                 
-             #   categoria=
-              #  volumen=
+                volumen = volumen.upper()
+        
+                volumen = volumen.split("º")[0]
+                volumen = volumen.replace("CL", "CLKKK")
+                volumen = volumen.replace("1L","1LKKK")
+                volumen = volumen.split("KKK")[0]
+            else:
+                volumen = "70 CL"
+           
+            if volumen.strip() == "0":
+                volumen = "70 CL"
+            print(volumen)
+            #print(volumen)
                # origen= 
                # graduacion=
                 
