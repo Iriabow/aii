@@ -84,7 +84,8 @@ def extraer_texto():
             
             
             descripcion2 = producto.find(class_='page-product-box').text
-            if(descripcion2.isspace()):
+            
+            if descripcion2.rstrip() != "":
                 volumen =  descripcion2.split('Bot')[1]
                 volumen.replace(" ",".")
                 volumen = volumen.split(".")[1]
@@ -97,12 +98,12 @@ def extraer_texto():
                 volumen = volumen.replace("CL", "CLKKK")
                 volumen = volumen.replace("1L","1LKKK")
                 volumen = volumen.split("KKK")[0]
-            else:
-                volumen = "70 CL"
            
-            if volumen.strip() == "0":
-                volumen = "70 CL"
-            print(volumen)
+                if volumen.strip() == "0":
+                    volumen = "70 CL"
+                print(volumen)
+            else:
+                descripcion2 = "No hay descripcion"
             #print(volumen)
                # origen= 
                # graduacion=
