@@ -1,0 +1,37 @@
+Licor:
+    -ID
+    -Titulo
+    -Descripcion
+    -Precio
+    -Código de referencia
+    -Categoría
+    -Cantidad
+    -Enlace al detalle del producto
+    -Graduación
+    -Puntuacion de usuario-Foreign key ManyToMany
+    -Media
+    -Origen
+    -Url Imagen
+    -En stock
+    -Comentarios-Usuario ManyToMany
+    
+Encuesta:
+    - Cual es tu bebida favorita? Multiselect de categorías
+    - ¿Qué rango de precios te interesa para hacer tus compras? Multiselect 0-10,11-20,21-40,41-60, >60
+    - Elige si te interesa alguna procedencia en concreto.
+    - Rango de grados de preferencia- Rango de alcohol
+    - Texto comentario- Cuéntanos qué te gusta beber, cuando y donde.
+
+Usuario:
+    -ID
+    -Nombre de usuario
+    -Password
+    -Encuesta OneToOne
+    -Puntuaciones- ManyToMany
+    -Favoritos -Licor fk
+
+Puntuacion:
+    ID
+    Valor
+    Usuario Fk
+    Licor   Fk
