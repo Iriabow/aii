@@ -24,7 +24,7 @@ def numero_paginas(url):
     numeroPaginas = soupAux.find('ul',class_='pagination').find_all('li')[-2].text
     return int(numeroPaginas)
 
-def extraer_texto():
+def extraer_texto_disevil():
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
     numeracion = 1
@@ -85,13 +85,12 @@ def extraer_texto():
             
             descripcion2 = producto.find(class_='page-product-box').text
             
-            if descripcion2.rstrip() != "":
+           
+            if "Bot" in descripcion2:
                 volumen =  descripcion2.split('Bot')[1]
-                volumen.replace(" ",".")
-                volumen = volumen.split(".")[1]
+                volumen = volumen.replace(" ","")
+                volumen = volumen.replace(".","")
             
-                descripcion2 ="No hay descripción"
-                
                 volumen = volumen.upper()
         
                 volumen = volumen.split("º")[0]
@@ -100,29 +99,62 @@ def extraer_texto():
                 volumen = volumen.split("KKK")[0]
            
                 if volumen.strip() == "0":
-                    volumen = "70 CL"
-                print(volumen)
-            else:
-                descripcion2 = "No hay descripcion"
-            #print(volumen)
-               # origen= 
-               # graduacion=
+                    volumen = "70CL"
+                    
                 
-               # enStock=
+                
+            else:
+                volumen = "70CL"
+            volumen = volumen.replace(" ","")
+            volumen = volumen.replace("070","70")
+            print(volumen)
+            
+            if "Bot" in descripcion2:
+                graduacion= descripcion2.split('Bot')[1]
+                graduacion = graduacion.upper()
+                graduacion = graduacion.replace("º","ºKKK")
+                graduacion = graduacion.replace("CL","CL.")
+                graduacion = graduacion.replace("CL..","CL.")
+                graduacion = graduacion.replace(" ","")
+                graduacion = graduacion.replace("L","L.")
+                graduacion = graduacion.replace("L..","L.")
+                graduacion = graduacion.split("KKK")[0]
+                graduacion = graduacion.split("L")[1]
+                graduacion = graduacion.split(".")[1]
+                graduacion = graduacion.replace(" ","")
+                if("º" not in graduacion):
+                    graduacion = str(graduacion) +"º"
+            
+                graduacion = graduacion.replace(" ","")   
+            else:
+                graduacion = "Sin determinar"
+                
+            print(graduacion)
             
             
+            origen= descripcion2.splitlines()[1]
+            if "Más" in origen:
+                origen = descripcion2.splitlines()[2]
+                origen = origen.split("Origen")[1]
+                origen = origen.replace(":","")
+            
+            if origen == "":
+                origen = "Sin determinar"
+            
+             
+            origen = origen.replace(" ","")
+            origen = origen.replace(".","")
+            if len(origen) > 30:
+                origen ="Sin determinar"
+            print(origen)  
             
             
-            
-           
-           
-            
-            
+
             
     print(numeracion)
 if __name__ == '__main__':
     
     
     print(numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/'))
-    extraer_texto()
+    extraer_texto_disevil()
     
