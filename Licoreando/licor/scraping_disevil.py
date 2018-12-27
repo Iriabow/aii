@@ -1,15 +1,8 @@
-import datetime
 import os
-from time import strptime, strftime
-from tkinter import *
-from tkinter import messagebox
+
 import urllib.request
 
 from bs4 import BeautifulSoup
-import whoosh
-from whoosh.fields import TEXT, Schema, NUMERIC
-from whoosh.index import create_in, open_dir
-from whoosh.qparser.default import MultifieldParser, QueryParser
 
 
 dirdocs="licores"
@@ -27,7 +20,6 @@ def numero_paginas(url):
 def extraer_texto_disevil():
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
-    numeracion = 1
     paginas = numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/')
     categorias = [' AGUARDIENTE ',' ABSENTA ',' BRANDY ',' COGNAC ',' ARMAGNAC ',' WHYSKY ',' BOURBON ',' GINEBRA ',' RON ',' VODKA ',' TEQUILA']
     for i in range(1,paginas+1):
