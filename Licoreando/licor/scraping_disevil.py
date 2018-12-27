@@ -34,26 +34,23 @@ def extraer_texto_disevil():
         soup=BeautifulSoup(abrir_url('https://www.disevil.com/tienda/es/80-licores-y-destilados/?p='+str(i)+"/"),'html.parser')
         
         for enlace in soup.find_all(class_='quick-view'):
-            
+            tupla = []
             url = enlace['href']
-            print(url)
+
             soup2 = BeautifulSoup(abrir_url(url),'html.parser')
             
             producto = soup2.find(itemtype="http://schema.org/Product")
             
             titulo = " " + producto.find(itemprop="name").text + " "
-            #print(titulo)
             
-            descripcion = producto.find(itemprop="description")
-            if(descripcion !=None):
-                descripcion = descripcion.text
+            descripcion1 = producto.find(itemprop="description")
+            if(descripcion1 !=None):
+                descripcion1 = descripcion1.text
             else:
-                descripcion=""
+                descripcion1=""
             precio= producto.find(itemprop="price").text
-            
-            #print(precio)
+
             referencia= producto.find(itemprop="sku").text
-            #print(referencia)
             enlace=url
             
             urlImagen=producto.find(itemprop="image")['src']
@@ -67,9 +64,6 @@ def extraer_texto_disevil():
             if(urlStock != 'http://schema.org/InStock'):
                 enStock= False
                 
-            #print(enStock)
-                
-            #for description in producto.find_all(class_='rte'):
             categoria = None
             for cat in categorias:
                 if cat in titulo:
@@ -80,12 +74,9 @@ def extraer_texto_disevil():
                     categoria = ' GINEBRA '
                 else:
                     categoria='OTROS LICORES'        
-            #print(categoria)
-            
-            
+ 
             descripcion2 = producto.find(class_='page-product-box').text
-            
-           
+             
             if "Bot" in descripcion2:
                 volumen =  descripcion2.split('Bot')[1]
                 volumen = volumen.replace(" ","")
@@ -101,13 +92,10 @@ def extraer_texto_disevil():
                 if volumen.strip() == "0":
                     volumen = "70CL"
                     
-                
-                
             else:
                 volumen = "70CL"
             volumen = volumen.replace(" ","")
             volumen = volumen.replace("070","70")
-            print(volumen)
             
             if "Bot" in descripcion2:
                 graduacion= descripcion2.split('Bot')[1]
@@ -128,9 +116,6 @@ def extraer_texto_disevil():
                 graduacion = graduacion.replace(" ","")   
             else:
                 graduacion = "Sin determinar"
-                
-            print(graduacion)
-            
             
             origen= descripcion2.splitlines()[1]
             if "Más" in origen:
@@ -141,20 +126,17 @@ def extraer_texto_disevil():
             if origen == "":
                 origen = "Sin determinar"
             
-             
             origen = origen.replace(" ","")
             origen = origen.replace(".","")
             if len(origen) > 30:
                 origen ="Sin determinar"
-            print(origen)  
-            
-            
-
-            
-    print(numeracion)
+        
+            descripcion = descripcion1 + descripcion2
+            tupla = (referencia,titulo,descripcion,precio,origen,categoria,volumen,graduacion,url,enStock,urlImagen)
+            print(tupla)
+        
 if __name__ == '__main__':
     
-    
-    print(numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/'))
     extraer_texto_disevil()
+    
     

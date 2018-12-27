@@ -1,16 +1,17 @@
 Licor:
     -ID
+    -Código de referencia
     -Titulo
     -Descripcion
     -Precio
-    -Código de referencia
+    -Origen
     -Categoría
-    -Cantidad
-    -Enlace al detalle del producto
+    -Volumen
     -Graduación
+    -Enlace al detalle del producto
     -Puntuacion de usuario-Foreign key ManyToMany
     -Media
-    -Origen
+    
     -Url Imagen
     -En stock
     -Comentarios-Usuario ManyToMany
