@@ -20,7 +20,7 @@ def numero_paginas(url='https://marianomadrueno.es/tienda/'):
 def extraer_licores():
     nPaginas=numero_paginas()
 
-    for i in range(9,nPaginas+1):
+    for i in range(1,nPaginas+1):
         
         soup=BeautifulSoup(abrir_url( 'https://marianomadrueno.es/tienda/page/'+str(i) ),'html.parser')
         

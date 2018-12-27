@@ -112,3 +112,5 @@ console.error: BroadcastService:
   Stack:
     remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
 
+[Parent 9490, Gecko_IOThread] WARNING: pipe error (103): Conexión reinicializada por la máquina remota: file /build/src/mozilla-unified/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 363
+1545892902408	Marionette	INFO	Stopped listening on port 33153
