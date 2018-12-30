@@ -21,8 +21,8 @@ def extraer_texto_casalicores():
         os.mkdir(dirindex)
     
     paginas = numero_paginas('http://lacasadeloslicores.es/tienda/')
-    
-    for i in range(1,paginas+1):
+    licores_casalicores=[]
+    for i in range(1,2):#paginas+1):
         soup=BeautifulSoup(abrir_url('http://lacasadeloslicores.es/tienda/page/'+str(i)+"/"),'html.parser')
         
         for enlace in soup.find_all('div',class_='archive-products'):
@@ -79,10 +79,12 @@ def extraer_texto_casalicores():
                 graduacion = "Sin determinar"
                 
          
-            tupla = (referencia,titulo,descripcion,precio,categoria,volumen,graduacion,url,enStock,urlImagen)
-        
-            print(tupla)
-        
+            #tupla = (referencia,titulo,descripcion,precio,categoria,volumen,graduacion,url,enStock,urlImagen)
+            categoria=[categoria]
+            diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":"Desconocido","categoria":categoria,"cantidad":volumen,"graduacion":graduacion,"urlProducto":url,"enStock":enStock,"urlImagen":urlImagen}
+            print(diccionarioLicor)
+            licores_casalicores.append(diccionarioLicor)
+    return licores_casalicores
 if __name__ == '__main__':
     
     extraer_texto_casalicores()

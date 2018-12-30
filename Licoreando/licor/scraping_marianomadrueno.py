@@ -1,17 +1,13 @@
 from bs4 import BeautifulSoup
 import urllib.request
-from selenium import webdriver
+
 import re
 
 def abrir_url(url):
     r = urllib.request.urlopen(url)
     return r
 
-def abrir_url_procesado(url):
-    driver = webdriver.Firefox(executable_path=r'../lib/geckodriver')
-    driver.get(url)
-    html = driver.page_source
-    return html
+
 def numero_paginas(url='https://marianomadrueno.es/tienda/'):
     soupAux = BeautifulSoup(abrir_url(url),'html.parser')
     numeroPaginas = soupAux.find('ul',class_='page-numbers').find_all('li')[-2].text
@@ -19,8 +15,8 @@ def numero_paginas(url='https://marianomadrueno.es/tienda/'):
 
 def extraer_licores():
     nPaginas=numero_paginas()
-
-    for i in range(1,nPaginas+1):
+    licores_marianomadrueno=[]
+    for i in range(1,3):
         
         soup=BeautifulSoup(abrir_url( 'https://marianomadrueno.es/tienda/page/'+str(i) ),'html.parser')
         
@@ -59,14 +55,26 @@ def extraer_licores():
             urlImagen = licorSoup.find_all('img',class_='wp-post-image')[0]['src']
             print(urlImagen)
             
-            descripcionArray = licorSoup.find_all('div',class_='woocommerce-tabs wc-tabs-wrapper')[0]
-        
-            descripcionArray = descripcionArray.find_all('p',{'style': re.compile(r'text-align*')})
+            descripcionArray = licorSoup.find_all('div',class_='woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab')
+            if(len(descripcionArray)>0):
+                descripcionArray = descripcionArray[0].find_all('p')#,{'style': re.compile(r'text-align*')})
             descripcion=""
             for p in descripcionArray:
-                descripcion=descripcion+p.text
+                descripcion=descripcion+'\n'+p.text.strip()
             print(descripcion)
             
+            
+            graduacion=None
+            
+            if("%" in descripcion and "GRAD" in descripcion.upper()):
+                graduacion=descripcion.split("%")[-2].split(" ")[-1]
+                
+                if ( not graduacion.strip().isdigit() ):
+                    graduacion=None
+                else:
+                    graduacion=float(graduacion)
+                    
+            print(graduacion)
             enStock = True
             stock=licorSoup.find_all('p',class_='stock in-stock')
                        
@@ -79,9 +87,13 @@ def extraer_licores():
                 enStock=False
           
             print(enStock)
-          
-
             
+            peso = licorSoup.find_all('td',class_='product_weight')[0].text.strip()
+            
+            print(peso)
+            diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":origen,"categoria":categoria,"cantidad":peso,"graduacion":graduacion,"urlProducto":licorUrl,"enStock":enStock,"urlImagen":urlImagen}
+            licores_marianomadrueno.append(diccionarioLicor)
+    return licores_marianomadrueno
 extraer_licores()        
         
         

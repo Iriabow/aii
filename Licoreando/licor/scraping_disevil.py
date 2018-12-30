@@ -22,7 +22,8 @@ def extraer_texto_disevil():
         os.mkdir(dirindex)
     paginas = numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/')
     categorias = [' AGUARDIENTE ',' ABSENTA ',' BRANDY ',' COGNAC ',' ARMAGNAC ',' WHYSKY ',' BOURBON ',' GINEBRA ',' RON ',' VODKA ',' TEQUILA']
-    for i in range(1,paginas+1):
+    licores_disevil=[]
+    for i in range(1,2):#paginas+1):
         soup=BeautifulSoup(abrir_url('https://www.disevil.com/tienda/es/80-licores-y-destilados/?p='+str(i)+"/"),'html.parser')
         
         for enlace in soup.find_all(class_='quick-view'):
@@ -66,7 +67,7 @@ def extraer_texto_disevil():
                     categoria = ' GINEBRA '
                 else:
                     categoria='OTROS LICORES'        
- 
+            categoria=[categoria]
             descripcion2 = producto.find(class_='page-product-box').text
              
             if "Bot" in descripcion2:
@@ -124,9 +125,10 @@ def extraer_texto_disevil():
                 origen ="Sin determinar"
         
             descripcion = descripcion1 + descripcion2
-            tupla = (referencia,titulo,descripcion,precio,origen,categoria,volumen,graduacion,url,enStock,urlImagen)
-            print(tupla)
-        
+            diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":origen,"categoria":categoria,"cantidad":volumen,"graduacion":graduacion,"urlProducto":url,"enStock":enStock,"urlImagen":urlImagen}
+            licores_disevil.append(diccionarioLicor)
+            print(diccionarioLicor)
+    return licores_disevil
 if __name__ == '__main__':
     
     extraer_texto_disevil()
