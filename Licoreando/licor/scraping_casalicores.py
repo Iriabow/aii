@@ -1,7 +1,7 @@
 import os
 
 import urllib.request
-
+import time
 from bs4 import BeautifulSoup
 
 dirdocs="licores"
@@ -20,14 +20,15 @@ def extraer_texto_casalicores():
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
     
-    paginas = numero_paginas('http://lacasadeloslicores.es/tienda/')
+    #nPaginas = numero_paginas('http://lacasadeloslicores.es/tienda/')
+    nPaginas = 2
     licores_casalicores=[]
-    for i in range(1,2):#paginas+1):
+    for i in range(1,nPaginas +1):#paginas+1):
         soup=BeautifulSoup(abrir_url('http://lacasadeloslicores.es/tienda/page/'+str(i)+"/"),'html.parser')
         
-        for enlace in soup.find_all('div',class_='archive-products'):
+        for enlace in soup.find_all('div',class_='archive-products')[0].find_all('li'):
             
-            tupla = []
+       
             urlImagen = enlace.find(class_= "inner").img['src']
             url = enlace.find(class_="product-image").a['href']
             
@@ -50,7 +51,8 @@ def extraer_texto_casalicores():
             referencia = producto2.find(class_="sku").text
             
             precio = producto2.find(class_="price").text
-          
+            precio = float(precio.replace(",",".").replace("€",""))
+        
             urlStock = producto.find(itemprop="availability")
              
             if urlStock != None:
@@ -73,10 +75,10 @@ def extraer_texto_casalicores():
                 volumen = "Sin determinar"
             
             try:
-                graduacion = producto.find(class_="goog-text-highlight")[1].text
+                graduacion = float(producto.find(class_="goog-text-highlight")[1].text.replace("º",""))
                 
             except:
-                graduacion = "Sin determinar"
+                graduacion = None
                 
          
             #tupla = (referencia,titulo,descripcion,precio,categoria,volumen,graduacion,url,enStock,urlImagen)
@@ -84,9 +86,7 @@ def extraer_texto_casalicores():
             diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":"Desconocido","categoria":categoria,"cantidad":volumen,"graduacion":graduacion,"urlProducto":url,"enStock":enStock,"urlImagen":urlImagen}
             print(diccionarioLicor)
             licores_casalicores.append(diccionarioLicor)
+            time.sleep(1)
     return licores_casalicores
-if __name__ == '__main__':
-    
-    extraer_texto_casalicores()
     
     

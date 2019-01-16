@@ -3,7 +3,7 @@ import os
 import urllib.request
 
 from bs4 import BeautifulSoup
-
+import time
 
 dirdocs="licores"
 dirindex="Index"
@@ -20,10 +20,11 @@ def numero_paginas(url):
 def extraer_texto_disevil():
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
-    paginas = numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/')
+    #nPaginas = numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/')
+    nPaginas = 2
     categorias = [' AGUARDIENTE ',' ABSENTA ',' BRANDY ',' COGNAC ',' ARMAGNAC ',' WHYSKY ',' BOURBON ',' GINEBRA ',' RON ',' VODKA ',' TEQUILA']
     licores_disevil=[]
-    for i in range(1,2):#paginas+1):
+    for i in range(1,nPaginas+1):#paginas+1):
         soup=BeautifulSoup(abrir_url('https://www.disevil.com/tienda/es/80-licores-y-destilados/?p='+str(i)+"/"),'html.parser')
         
         for enlace in soup.find_all(class_='quick-view'):
@@ -41,7 +42,7 @@ def extraer_texto_disevil():
                 descripcion1 = descripcion1.text
             else:
                 descripcion1=""
-            precio= producto.find(itemprop="price").text
+            precio= float(producto.find(itemprop="price").text.replace(",",".").replace("€",""))
 
             referencia= producto.find(itemprop="sku").text
             enlace=url
@@ -105,10 +106,13 @@ def extraer_texto_disevil():
                 graduacion = graduacion.replace(" ","")
                 if("º" not in graduacion):
                     graduacion = str(graduacion) +"º"
-            
-                graduacion = graduacion.replace(" ","")   
+                try:
+                    graduacion = float(graduacion.replace(" ","").replace("º",""))
+                except:
+                    graduacion = None
+                    
             else:
-                graduacion = "Sin determinar"
+                graduacion = None
             
             origen= descripcion2.splitlines()[1]
             if "Más" in origen:
@@ -126,11 +130,9 @@ def extraer_texto_disevil():
         
             descripcion = descripcion1 + descripcion2
             diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":origen,"categoria":categoria,"cantidad":volumen,"graduacion":graduacion,"urlProducto":url,"enStock":enStock,"urlImagen":urlImagen}
-            licores_disevil.append(diccionarioLicor)
             print(diccionarioLicor)
+            licores_disevil.append(diccionarioLicor)
+            time.sleep(1)
     return licores_disevil
-if __name__ == '__main__':
-    
-    extraer_texto_disevil()
     
     
