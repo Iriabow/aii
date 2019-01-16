@@ -21,7 +21,7 @@ def extraer_texto_casalicores():
         os.mkdir(dirindex)
     
     #nPaginas = numero_paginas('http://lacasadeloslicores.es/tienda/')
-    nPaginas = 2
+    nPaginas = 1
     licores_casalicores=[]
     for i in range(1,nPaginas +1):#paginas+1):
         soup=BeautifulSoup(abrir_url('http://lacasadeloslicores.es/tienda/page/'+str(i)+"/"),'html.parser')

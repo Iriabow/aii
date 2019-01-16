@@ -15,7 +15,7 @@ def numero_paginas(url='https://marianomadrueno.es/tienda/'):
 
 def extraer_licores():
     #nPaginas=numero_paginas()
-    nPaginas = 2
+    nPaginas = 1
     licores_marianomadrueno=[]
     for i in range(1,nPaginas+1):
         

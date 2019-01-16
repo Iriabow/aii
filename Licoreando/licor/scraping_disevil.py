@@ -21,7 +21,7 @@ def extraer_texto_disevil():
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
     #nPaginas = numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/')
-    nPaginas = 2
+    nPaginas = 1
     categorias = [' AGUARDIENTE ',' ABSENTA ',' BRANDY ',' COGNAC ',' ARMAGNAC ',' WHYSKY ',' BOURBON ',' GINEBRA ',' RON ',' VODKA ',' TEQUILA']
     licores_disevil=[]
     for i in range(1,nPaginas+1):#paginas+1):
