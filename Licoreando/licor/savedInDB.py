@@ -13,15 +13,17 @@ def save_all_licores():
         print(licDicc)
         save_licor(licDicc)
     '''
+    """
     licores2 = extraer_texto_disevil() 
     for licDicc in (licores2):
         print(licDicc)
         save_licor(licDicc)
-    
+    """
     licores = extraer_texto_casalicores()
     for licDicc in (licores):
         print(licDicc)
         save_licor(licDicc)
+
 
 def save_licor(licDicc):
     licorAux = Licor.objects.filter(urlProducto = licDicc["urlProducto"]).first()

@@ -25,7 +25,7 @@ def extraer_texto_disevil():
     categorias = ['AGUARDIENTE','ABSENTA','BRANDY','COGNAC','ARMAGNAC','WHYSKY','BOURBON','GINEBRA','RON','VODKA','TEQUILA']
     licores_disevil=[]
     file = open("licoreslog.txt", "a",encoding="utf-8")
-    for i in range(1,nPaginas+1):#paginas+1):
+    for i in range(1,20+1):#paginas+1):
         soup=BeautifulSoup(abrir_url('https://www.disevil.com/tienda/es/80-licores-y-destilados/?p='+str(i)+"/"),'html.parser')
         
         
