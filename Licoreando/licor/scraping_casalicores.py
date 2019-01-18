@@ -20,12 +20,12 @@ def extraer_texto_casalicores():
     if not os.path.exists(dirindex):
         os.mkdir(dirindex)
     
-    #nPaginas = numero_paginas('http://lacasadeloslicores.es/tienda/')
-    nPaginas = 20
+    nPaginas = numero_paginas('http://lacasadeloslicores.es/tienda/')
+    #nPaginas = 20
     licores_casalicores=[]
-    file = open("licoreslog.txt", "w",encoding="utf-8")
+    file = open("licoreslog.txt", "a",encoding="utf-8")
     
-    for i in range(1,10):#paginas+1):
+    for i in range(1,nPaginas+1):#paginas+1):
         soup=BeautifulSoup(abrir_url('http://lacasadeloslicores.es/tienda/page/'+str(i)+"/"),'html.parser')
         
         for enlace in soup.find_all('div',class_='archive-products')[0].find_all('li'):
@@ -37,28 +37,43 @@ def extraer_texto_casalicores():
             
             producto = soup2.find(itemtype = 'http://schema.org/Product')
             
-            titulo = producto.find(itemprop='name').text
-            
+            try:
+                titulo = producto.find(itemprop='name').text
+            except:
+                titulo = None
             
             file.write(titulo+ "-Casa Licores-Pagina: " + str(i) + "\n")
             
-            descripcionEntera = producto.find(class_="resp-tabs-container")
+            try:
+                descripcionEntera = producto.find(class_="resp-tabs-container")
+            except:
+                descripcionEntera = None
+            try:
+                descripcion = descripcionEntera.text.split("Reseñas")[0].strip()
+                descripcion = descripcion.split('CATA')[0].strip()
+                descripcion = descripcion.split('Tipo')[0].strip()
+            except:
+                descripcion = None
             
-            descripcion = descripcionEntera.text.split("Reseñas")[0].strip()
-            
-            descripcion = descripcion.split('CATA')[0].strip()
-            descripcion = descripcion.split('Tipo')[0].strip()
-
-            
-            
-            producto2 = soup2.find(class_="product-summary-wrap")
-            referencia = producto2.find(class_="sku").text
-            
-            precio = producto2.find(class_="price").text
-            precio = float(precio.replace(",",".").replace("€",""))
-        
-            urlStock = producto.find(itemprop="availability")
-             
+            try:
+                producto2 = soup2.find(class_="product-summary-wrap")
+            except:
+                producto2= None
+            try:
+                referencia = producto2.find(class_="sku").text
+            except:
+                referencia = None
+            try:
+                precio = producto2.find(class_="price").text
+                precio = float(precio.replace(",",".").replace("€",""))
+            except:
+                precio = None
+                
+            try:
+                urlStock = producto.find(itemprop="availability")
+            except:
+                urlStock = None
+                
             if urlStock != None:
                 urlStock = urlStock['href']
                 

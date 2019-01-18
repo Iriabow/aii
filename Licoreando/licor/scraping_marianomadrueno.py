@@ -14,11 +14,11 @@ def numero_paginas(url='https://marianomadrueno.es/tienda/'):
     return int(numeroPaginas)
 
 def extraer_licores():
-    #nPaginas=numero_paginas()
-    nPaginas = 1
+    nPaginas=numero_paginas()
+    #nPaginas = 1
     licores_marianomadrueno=[]
-    file = open("licoreslog.txt", "a",encoding="utf-8")
-    for i in range(1,10):
+    file = open("licoreslog.txt", "w",encoding="utf-8")
+    for i in range(1,nPaginas+1):
         
         soup=BeautifulSoup(abrir_url( 'https://marianomadrueno.es/tienda/page/'+str(i) ),'html.parser')
         
@@ -28,15 +28,21 @@ def extraer_licores():
             
             licorSoup=BeautifulSoup(abrir_url(licorUrl),'lxml')
             
-            
-            titulo = licorSoup.find_all('h1',class_='product_title entry-title')[0].text
-            
+            try:
+                titulo = licorSoup.find_all('h1',class_='product_title entry-title')[0].text
+            except:
+                titulo = None
+                
             file.write(titulo+ "-Mariano Madrueno-Pagina: " + str(i) + "\n")
-            
-            precio = float(licorSoup.find_all('p',class_='price')[0].span.text.split('€')[0].replace(',','.'))
+            try:
+                precio = float(licorSoup.find_all('p',class_='price')[0].span.text.split('€')[0].replace(',','.'))
+            except:
+                precio = None
             referencia = None
             origen= None
+    
             meta=licorSoup.find_all('div',class_='product_meta')[0].text.split(':')
+            
             palabraAnterior=""
             categoriaArray=[]
             categoria = "OTROS LICORES"
