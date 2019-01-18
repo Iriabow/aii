@@ -1,0 +1,1769 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "licor",
+    "model": "categoria"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "licor",
+    "model": "licor"
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 1,
+  "fields": {
+    "codigoReferencia": "ORX53",
+    "titulo": " AGUARDIENTE PAZO DE VALDOMI\u00d1O ",
+    "descripcion": "A la elaboraci\u00f3n m\u00e1s artesanal y tradicional se a\u00f1ade el novedoso proceso de desmetilizaci\u00f3n. El resultado es un aguardiente limpio y cristalino, de mayor complejidad y finura arom\u00e1tica debido a su triple destilaci\u00f3n.\nM\u00e1s \nOrigen: Espa\u00f1a\nD.O. Indicaci\u00f3n Geogr\u00e1fica Orujo de Galicia.\nAguardiente de Orujo de Albari\u00f1o con triple destilaci\u00f3n. Permanece en reposo un a\u00f1o previamente a su embotellado.\nColor cristalino. Aromas secundarios, matices de frutas, toques de rosa y ligeramente dulce.\nBot. 70 Cl. 43\u00ba\nLA DESTILERIA\nPazo de Valdomi\u00f1o se ha convertido en todo un referente en cuanto a elaboraci\u00f3n y distinci\u00f3n de aguardientes y licores tradicionales de Galicia se refiere. Ubicada en el valle de O Rosal, en la desembocadura del r\u00edo Mi\u00f1o, zona reconocida por su microclima ideal para la actividad vitivin\u00edcola.\n\n",
+    "precio": 18.65,
+    "origen": "Espa\u00f1a",
+    "cantidad": "70CL",
+    "graduacion": 43.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/aguardientes-y-orujos/2215-aguardiente-pazo-de-valdomino.html",
+    "urlImagen": "https://www.disevil.com/tienda/13989-tm_large_default/aguardiente-pazo-de-valdomino.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 2,
+  "fields": {
+    "codigoReferencia": "LICOR63",
+    "titulo": " ABSENTA 80 CANNABIS ",
+    "descripcion": "La Absenta es conocida tambi\u00e9n como\u00a0El hada verde o el\u00a0Diablo verde por sus efectos alucinogenos.\nM\u00e1s \nOrigen: Espa\u00f1a\nBebida espiruosa elaborada a base de aromas de la planta Artemisia absinthium, ajenjo, flores del hinojo y an\u00eds.\nSu sabor es anisado y al mezclarla con agua fria y azucar, se convierte en una bebida lechosa.\nBot. 70 Cl. 70\u00ba\n",
+    "precio": 16.8,
+    "origen": "Espa\u00f1a",
+    "cantidad": "70CL",
+    "graduacion": 70.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/otros-licores/2013-absenta-80-cannabis.html",
+    "urlImagen": "https://www.disevil.com/tienda/13751-tm_large_default/absenta-80-cannabis.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 3,
+  "fields": {
+    "codigoReferencia": "LICOR75",
+    "titulo": " ABSENTA JACQUES SENAUX BLUE ",
+    "descripcion": "El ritual de tomar la absenta, poniendo az\u00facar en una cuchara y manteniendo en lo alto de una copa o un vaso largo se deja gotear agua fr\u00eda como el hielo a trav\u00e9s del az\u00facar de modo que caigan las gotas poco a poco dentro del vaso. El cambio de color de la bebida, gota a gota, parece una m\u00e1gica alquimia.\nM\u00e1s \nOrigen: Espa\u00f1a\nSe elabora a partir de una cuidadosa destilaci\u00f3n de Artimisia Absintio (ajenjo), anis e hinojo, preservando todas sus propiedades. Contiene ajenjo real (Tuyona)\nColor Azul intenso y brillante. Aromas anisados. En boca es seca con notas de anis y regaliz.\nPuede tomarse sola, con agua para aperitivo y para c\u00f3cteles y combinados\nBot. 70 Cl. 78\u00ba\n",
+    "precio": 20.95,
+    "origen": "Espa\u00f1a",
+    "cantidad": "70CL",
+    "graduacion": 78.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/otros-licores/2074-absenta-jacques-senaux-blue.html",
+    "urlImagen": "https://www.disevil.com/tienda/13822-tm_large_default/absenta-jacques-senaux-blue.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 4,
+  "fields": {
+    "codigoReferencia": "LICOR84",
+    "titulo": " ABSENTA LA CLANDESTINE ",
+    "descripcion": "La absenta La Clandestine gan\u00f3 el primer premio\u00a0 \"Absinthe d'or\" en el Concurso Nacional de Alcoholes Suizos el 16 de septiembre de 2005 y Medalla de Oro en la misma competici\u00f3n en 2007.\nM\u00e1s \nOrigen: Suiza\nLa Absenta La Clandestine se elabora en el peque\u00f1o pueblo de Couvet en la regi\u00f3n de Val-de-Travers (Suiza), donde naci\u00f3 este destilado a mitad XVIII.\nCada etapa del proceso utilizado para destilar y embotellar La\u00a0 Absenta Clandestine es hecha a mano. La elecci\u00f3n de las mejores plantas, destilanda en peque\u00f1os lotes, envasado y etiquetado totalmente manual, con una receta compuesta de m\u00e1s de 10 plantas, con una maravillosa riqueza de aromas, seguido de un ligero amargor persistente.\nColor Transparente y brillante con reflejos azulados.\u00a0 Aromas de hinojo,\u00a0 ajenjo y an\u00eds, notas herbales y florales. En boca cremosa, equilibrada, fresca, notas de hierbas ar\u00f3maticas y especias.\nBot. 70 Cl. 53\u00ba\n",
+    "precio": 49.9,
+    "origen": "Suiza",
+    "cantidad": "70CL",
+    "graduacion": 53.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/otros-licores/2135-absenta-la-clandestine.html",
+    "urlImagen": "https://www.disevil.com/tienda/13898-tm_large_default/absenta-la-clandestine.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 5,
+  "fields": {
+    "codigoReferencia": "LICOR57",
+    "titulo": " ABSENTA LE DIABLE NOIR 85\u00ba ",
+    "descripcion": "Existe la leyenda de que ingerir una cierta cantidad de absenta causa alucinaciones, por eso algunos pa\u00edses decidieron prohibirla.\nM\u00e1s \nOrigen: Espa\u00f1a\nLa absenta es una de las bebidas m\u00e1s notorias y controvertidas de la historia. Su popularidad se debe en gran parte a los artistas y la bohemia de finales del siglo XIX.\nLa composici\u00f3n principal de esta bebida es el aporte de aromas de la planta \"Artemisia absinthium\" o ajenjo, el de las flores del hinojo y el an\u00eds.\nColor: Negro brillante. Aromas de ajenjo y anis. En boca es vibrante y con mucho cuerpo, con notas de frutas rojas y regaliz y un final persistente que hace que sea un licor perfecto para disfrutar sola con algua fria, con c\u00f3cteles, combinados\u00a0 y refrescos.\nBot. 70 Cl. 85\u00ba\n",
+    "precio": 18.9,
+    "origen": "Espa\u00f1a",
+    "cantidad": "70CL",
+    "graduacion": 85.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/otros-licores/1931-absenta-le-diable-noir-85.html",
+    "urlImagen": "https://www.disevil.com/tienda/13662-tm_large_default/absenta-le-diable-noir-85.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 6,
+  "fields": {
+    "codigoReferencia": "LICOR83",
+    "titulo": " ABSENTA LE DIABLE VERT ",
+    "descripcion": "La Absenta es una de las bebidas con m\u00e1s controversia de la historia, famosa por la leyenda de los artistas del siglo XIX\nM\u00e1s \nOrigen: Espa\u00f1a\nAbsenta Le Diable Vert esta elaborada con alcohol, aromas de la planta \"Artemisia absinthium\" o ajenjo,\u00a0 flores de hinojo y an\u00eds.\nVista color verde brillante. Aromas de plantas aromaticas, anis y ajenjo. En boca intensa, potente, ligeramente anisada.\nBot. 70 Cl. 70\u00ba\n",
+    "precio": 15.95,
+    "origen": "Espa\u00f1a",
+    "cantidad": "70CL",
+    "graduacion": 70.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/otros-licores/2134-absenta-le-diable-vert.html",
+    "urlImagen": "https://www.disevil.com/tienda/13897-tm_large_default/absenta-le-diable-vert.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 7,
+  "fields": {
+    "codigoReferencia": "LICOR03",
+    "titulo": " ABSENTA MARI MAYANS ",
+    "descripcion": "La Absenta era el licor preferido del c\u00e9lebre pintor Van Gogh\nM\u00e1s \nOrigen: Espa\u00f1a\nLa Absenta Mari Mayans se destila con hojas y tallos de Artemisia Absinthium (ajenjo) maceradas en presencia de otras plantas. El resultado es una bebida de color verde que enturbia violentamente cuando se le a\u00f1ade agua.\nEs una de las pocas absentas 100% natural\nM\u00e9todo de Louche o paloma: Se pone az\u00facar en una cuchara y se mantiene en lo alto de un vaso largo que lleva una onza de Absinthe verde. Entonces se deja gotear agua fr\u00eda como el hielo a trav\u00e9s del az\u00facar de modo que caigan las gotas poco a poco dentro del vaso. Cada gota se convierte en una nube blanca como la nieve.\nEl az\u00facar suaviza el fuerte sabor de la Absinthe con este atractivo m\u00e9todo; el cambio de color de la bebida, gota a gota, parece una m\u00e1gica alquimia.\nBot. 70 Cl. 70\u00ba\nLA DESTILER\u00cdA\nDestiler\u00edas Mar\u00ed Mayans fue fundada en 1880 por Juan Mar\u00ed Mayans, al que su padre, Cirujano de profesi\u00f3n, aficionado a las plantas arom\u00e1ticas y medicinales, y un estudioso de sus propiedades, transmiti\u00f3 todo su saber. Las formulas de estos destilados han ido pasando de generaci\u00f3n en generaci\u00f3n hasta la actual, los bisnietos de su creador.\n",
+    "precio": 17.95,
+    "origen": "Espa\u00f1a",
+    "cantidad": "70CL",
+    "graduacion": 70.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/home/307-absenta-mari-mayans.html",
+    "urlImagen": "https://www.disevil.com/tienda/201-tm_large_default/absenta-mari-mayans.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 8,
+  "fields": {
+    "codigoReferencia": "ABS101",
+    "titulo": " ABSENTA RODNIK'S ",
+    "descripcion": "OFERTA HASTA AGOTAR EXISTENCIAS\nM\u00e1s \nOrigen: Espa\u00f1aAbsenta Rodnik\u0092s esta elaborada por destilaci\u00f3n y maceraci\u00f3n de diferentes plantas aromaticas mediterraneas, destacando el ajenjo.Vista: Color verde lima palido. En nariz: Suave, predominado el ajenjo y las hierbas aromaticas, por encima del anis.En boca: Suave, predominando el ajenjo, con toques de anis.Bot. 70cl   70\u00baUN POCO DE HISTORIABeveland lleva algo m\u00e1s de 20 a\u00f1os dedicados a la elaboraci\u00f3n de licores  y destilados en el Norte de Espa\u00f1aEs una empresa joven, que utiliza modernas tecnologias que aplica a la mejora constante en la elaboraci\u00f3n de sus productos.\n",
+    "precio": 14.7,
+    "origen": "Sin determinar",
+    "cantidad": "70CL",
+    "graduacion": 70.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/licores-y-destilados/1575-absenta-rodnik-s.html",
+    "urlImagen": "https://www.disevil.com/tienda/7326-tm_large_default/absenta-rodnik-s.jpg",
+    "enStock": false
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 9,
+  "fields": {
+    "codigoReferencia": "LICOR64",
+    "titulo": " ABSENTA VAN GOGH 55\u00ba ",
+    "descripcion": "Seg\u00fan la tradici\u00f3n hay que tomar la absenta siguiendo el ritual de la cuchara agujereada con hielo picado.\nM\u00e1s \nOrigen: Francia\nAlgunos de los ingredientes que incluye este espiritoso son ajenjo, anis verde , esencia de an\u00eds estrellado y extractos de b\u00e1lsamo de lim\u00f3n y menta alcoh\u00f3licas. \nColor verde claro brillante con reflejos amarillos\nAroma de plantas de ajenjo mezclado con an\u00eds, menta y especias.\nEn boca redondo y evoluci\u00f3n bien estructurada y el ataque an\u00eds, gracias a la presencia de ajenjo, terminando con notas frescas y picantes (ajenjo, b\u00e1lsamo de lim\u00f3n y menta)\nBot. 70 Cl. 55\u00ba\n",
+    "precio": 19.9,
+    "origen": "Francia",
+    "cantidad": "70CL",
+    "graduacion": 55.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/otros-licores/2014-absenta-van-gogd-55.html",
+    "urlImagen": "https://www.disevil.com/tienda/13752-tm_large_default/absenta-van-gogd-55.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 10,
+  "fields": {
+    "codigoReferencia": "ORX31",
+    "titulo": " AGUARDIENTE DE ORUJO RUAVIEJA ",
+    "descripcion": "\nM\u00e1s \nOrigen : Galicia\nAguardiente obtenido por destilaci\u00f3n de orujos de Galicia .\nColor cristalino y brillante. Aroma intenso . En boca suave y ligeramente dulce.\nBot. 70 Cl. 42\u00ba\nLA DESTILERIA\nEl grupo familiar Rodr\u00edguez Ovalle, vinculado al sector vitivin\u00edcola durante cuatro generaciones. En 1978 empezaron a comercializar los orujos y aguardientes Ruavieja, siendo hoy en dia un referente de los licores gallegos aunando la tradici\u00f3n en la elaboraci\u00f3n de todos sus productos con los m\u00e1s modernos sistemas de fabricaci\u00f3n, control de calidad y comercializaci\u00f3n .\n",
+    "precio": 10.89,
+    "origen": "Galicia",
+    "cantidad": "70CL",
+    "graduacion": 42.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/aguardientes-y-orujos/1460-aguardiente-de-orujo.html",
+    "urlImagen": "https://www.disevil.com/tienda/5179-tm_large_default/aguardiente-de-orujo.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 11,
+  "fields": {
+    "codigoReferencia": "ORX50",
+    "titulo": " AGUARDIENTE PAZO DE SE\u00d1ORANS ",
+    "descripcion": "El Aguardiente de Orujo Pazo de Se\u00f1orans ha sido galardonado en tres ocasiones con el Pote de Ouro como mejor orujo en la Cata de Aguardientes de Galicia.\nM\u00e1s \nOrigen: Espa\u00f1a\nD.O. Indicaci\u00f3n Geogr\u00e1fica Aguardiente de Galicia\u00a0\nVariedad: 100% albari\u00f1o\nDestilaci\u00f3n en alambiques, de forma tradicional a fuego directo. Doble destilaci\u00f3n\nColor cristalino, brillante. Aroma de gran intensidad con notas de uva albari\u00f1o. En boca sedoso, intenso, y largo final.\nBot. 50 Cl. 41\u00ba\n",
+    "precio": 17.65,
+    "origen": "Espa\u00f1a",
+    "cantidad": "50CL",
+    "graduacion": 41.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/aguardientes-y-orujos/2212-aguardiente-pazo-de-senorans.html",
+    "urlImagen": "https://www.disevil.com/tienda/13986-tm_large_default/aguardiente-pazo-de-senorans.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 12,
+  "fields": {
+    "codigoReferencia": "ORX45",
+    "titulo": " AKVAVIT AALBORG JUBILEUMS ",
+    "descripcion": "Un akvavit cl\u00e1sico dan\u00e9s, basado en el eneldo y el cilantro con un elegante acabado de roble blanco americano.\nM\u00e1s \nOrigen: Dinamarca\nBot. 70 Cl. 40\u00ba\n",
+    "precio": 20.35,
+    "origen": "Dinamarca",
+    "cantidad": "70CL",
+    "graduacion": 40.0,
+    "urlProducto": "https://www.disevil.com/tienda/es/aguardientes-y-orujos/2019-akvavit-aalborg-jubileums.html",
+    "urlImagen": "https://www.disevil.com/tienda/13757-tm_large_default/akvavit-aalborg-jubileums.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 13,
+  "fields": {
+    "codigoReferencia": "855",
+    "titulo": "10 RF Osborne",
+    "descripcion": "Descripci\u00f3n del Producto\nDESCRIPCI\u00d3N de Osborne 10 RF :\nColor caoba oscuro, con un bouquet rico y generoso. Semi-dulce con sabor a frutos secos.\nCARACTER\u00cdSTICAS de Osborne 10 RF :\nJerez Oloroso M\u00e9dium de paladar extraordinariamente agradable. Elegante y con mucho cuerpo. Vejez promediada 6 a\u00f1os. Caja de 6 unidades. 90% Palomino, 10% Pedro Xim\u00e9nez y 19\u00ba en sus 75cl. Un Jerez para degustar en cualquier oportunidad. Ligeramente abocado, liger\u00edsimamente astringente, con cuerpo, redondo, lleno. De paladar extraordinariamente agradable. Caracter\u00edsticas Organol\u00e9pticas\nFase visual: De color caoba oscuro y brillante.\nFase olfativa: Punzante, intenso, elegante con aromas a pasas, torrefactos, frutos secos y vainilla.\nSabor: Semi seco, con cuerpo y notas dulces de Pedro Xim\u00e9nez.\nCONSEJOS para Osborne 10 RF :\nTemperatura del servicio: Consumir preferentemente entre 12 y 16\u00baC. Vino apropiado para acompa\u00f1ar charcuter\u00eda con piment\u00f3n, chacinas.",
+    "precio": 7.95,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/oloroso-dulce/10-rf-osborne/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/03/10-RF-OSBORNE.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 14,
+  "fields": {
+    "codigoReferencia": "68",
+    "titulo": "100 Pippers",
+    "descripcion": "Descripci\u00f3n del Producto\nEs un whisky tipo blended, con m\u00e1s de 30 distintos tipos\u00a0de whisky de malta. \u00a0Normalmente en presentaci\u00f3n de 1Lt, con una graduaci\u00f3n alcoholica del 40\u00ba\n\u00a0\nCuenta una leyenda de Escocia que si tomas un buen whisky, escuchar\u00e1s suavemente el sonido de una gaita. Pero si tienes la posibilidad de tomar un whisky escoc\u00e9s excelente, entonces la experiencia ser\u00e1 muy distinta, escuchar\u00e1s 100 gaitas!\nBasado en esta historia es que se decide el nombre del whisky 100Pipers.\u00a0El nombre comparte historia con el\u00a0m\u00edtico\u00a0batall\u00f3n de 100bravos Gaiteros, que acompa\u00f1aban al heroe Escoc\u00e9s \u201cBonnie Prince Charlie\u201d, la leyenda cuenta que el sonido de las Gaitas inyectaba de bravura a sus soldados.",
+    "precio": 11.05,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/whisky/100-pippers/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2017/01/100-pippers-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 15,
+  "fields": {
+    "codigoReferencia": "810",
+    "titulo": "1730 AMONTILLADO",
+    "descripcion": "Descripci\u00f3n del Producto\nVino Amontillado VORS\u00a01730 de \u00c1lvaro Domecq\nDe aroma punzante y regusto de avellana, reune los caracteres del fino y del oloroso suave al mismo tiempo.\nVino de jerez seco de color \u00e1mbar, de gran intensidad arom\u00e1tica que presenta notas punzantes que recuerdan su crianza biol\u00f3gica, as\u00ed como notas de almendras y madera, es suave y muy seco al paladar, con una gran persistencia en boca. Resulta id\u00f3neo para acompa\u00f1ar quesos de curaci\u00f3n media, sopas y consom\u00e9s, carnes blancas y pescado azul.\n\u00c1lvaro Domecq pone a nuestro alcance su sue\u00f1o hecho realidad. La gama de productos exclusivos 1730, representa lo que todo bodeguero aspira a conseguir.\nCada Botella es una creaci\u00f3n en s\u00ed misma y en cada gota que sale de sus centenarias soleras se nos va parte de nuestra propia historia.\nD.O. Jerez- X\u00e9r\u00e8s-Sherry\nIndicaci\u00f3n geogr\u00e1fica: Jerez de la Frontera (C\u00e1diz).\nBodega: \u00c1lvaro Domecq, S.L.\nVariedades de Uva: 100% palomino\nCrianza: m\u00ednimo de 30 a\u00f1os en bodega.\nTemperatura natural de consumo 15\u00baC.\nCapacidad:\u00a037.5 cl\nFuego y Sal, sabores andaluces S.L.",
+    "precio": 24.87,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/amontillado/1730-amontillado/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/03/1730-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 16,
+  "fields": {
+    "codigoReferencia": "4085",
+    "titulo": "2 Juanes Roble T. 3/4",
+    "descripcion": "Descripci\u00f3n del Producto\nVino D. O. Constantina, Sevilla",
+    "precio": 6.55,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/cosecha/2-juanes-roble-t-34/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2018/12/2-juanes-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 17,
+  "fields": {
+    "codigoReferencia": "1372",
+    "titulo": "200 Monges Rva. T. 3/4",
+    "descripcion": "Descripci\u00f3n del Producto\nAmplia capa de color rub\u00ed intenso y profundo, en nariz se aprecian notas de frutas rojas maduras, tabaco, cedro y trufa. Muy limpio y de buena intensidad arom\u00e1tica. En boca buen cuerpo, con taninos nobles de buena crianza en barrica y muy equilibrado. Sabroso, apreci\u00e1ndose notas de regaliz. Elegante en toda su evoluci\u00f3n arom\u00e1tica.\nGraduaci\u00f3n: 13,5%\nTama\u00f1o: 75 cl",
+    "precio": 33.4,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/rioja/200-monges-tinto-reserva-06/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2015/07/200-monges-reserva-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 18,
+  "fields": {
+    "codigoReferencia": "0002842",
+    "titulo": "5TH Blue floral water",
+    "descripcion": "Descripci\u00f3n del Producto\nLa ginebra 5th Water Floral es una ginebra premium obtenida por triple destilaci\u00f3n en la que se mezclan un selecci\u00f3n de flores que le proporcionan un sabor ligeramente amargo en su inicio para acabar con los t\u00edpicos sabores a enebro y los toques florales de sus ingredientes.\n\n\n\nCapacidad\n0,7l",
+    "precio": 20.15,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/ginebra/5th-blue-floral-water/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/01/5th-water-floral-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 19,
+  "fields": {
+    "codigoReferencia": "0002844",
+    "titulo": "5TH Earth Citrics",
+    "descripcion": "Descripci\u00f3n del Producto\nLa ginebra 5th Earth Citrics, es una ginebra premium de un caracteristico color amarillo que al igual que las otras ginebras 5th, se obtiene por una triple destilaci\u00f3n con una infusi\u00f3n de citricos. Su sabor es fresco y predominante de citricos.\n\n\n\nCapacidad\n0,7l",
+    "precio": 20.15,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/ginebra/5th-earth-citrics/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/01/5th-citrics-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 20,
+  "fields": {
+    "codigoReferencia": "0002843",
+    "titulo": "5TH Pink red fruits fire",
+    "descripcion": "Descripci\u00f3n del Producto\nLa 5th Fire es una ginebra Premium de 42\u00ba de alcohol fabricada en Espa\u00f1a.\nDe la infusi\u00f3n de moras, grosellas, ar\u00e1ndanos y fresas conseguimos la\u00a0 ginebra m\u00e1s pasional. Con toques dulces y bals\u00e1micos pero con un paso por boca complejo donde podemos obtener matices de enebro y bot\u00e1nicos que hacen que \u00e9sta no pierda su car\u00e1cter seco. Ideal\u00a0 para aquellos que busquen el atrevimiento y la diferenciaci\u00f3n en su copa.",
+    "precio": 20.15,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/ginebra/5th-pink-red-fruits-fire/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/01/x5th-fire-red-fruits.jpg.pagespeed.ic_.8UmwCcwJPW-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 21,
+  "fields": {
+    "codigoReferencia": "0002723",
+    "titulo": "7D Essential",
+    "descripcion": "Descripci\u00f3n del Producto\n7D Essential Gin es una ginebra Premium de un 40,0% alc./vol., muy bot\u00e1nica y c\u00edtrica y, desde el 2010, la 7D Essential se fabrica en Espa\u00f1a.\nEs una ginebra Premium, tipo London Dry de 40,0 % alc./vol., obtenida por cinco destilaciones de grano de ma\u00edz y dos m\u00e1s con los bot\u00e1nicos.\nLos bot\u00e1nicos utilizados son enebro, corteza de naranja y lim\u00f3n, lima, canela, hierbabuena y lavanda.\nEl producto obtenido, es limpio y muy refrescante, predominando tanto al olfato como al gusto, la hierbabuena y algo menos los c\u00edtricos.\nEsta ginebra se fabrica en Espa\u00f1a desde el a\u00f1o 2010.\nSe presenta en una botella moderna de dise\u00f1o de 70 cl., transparente con fondo y m\u00e1rgenes verdosos.",
+    "precio": 23.2,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/ginebra/7d-essential/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/01/7d-essential.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 22,
+  "fields": {
+    "codigoReferencia": "3814",
+    "titulo": "8000 Marques de Burgos Cza. T. 3/4",
+    "descripcion": "Descripci\u00f3n del Producto\n8000 Marqu\u00e9s de Burgos, nombrado as\u00ed como tributo a las 8000 cepas de las que nace, es el resultado de una rigurosa selecci\u00f3n de\u00a0tres peque\u00f1as parcelas en ladera con orientaci\u00f3n sur,\u00a0 ubicadas en la localidad burgalesa de Quintana del Pidio. En esta zona privilegiada de la Denominaci\u00f3n de Origen se respet\u00f3 el tama\u00f1o original de sus parcelas, frente a otras zonas donde se realiz\u00f3 concentraci\u00f3n parcelaria, por lo que a\u00fan existen peque\u00f1as propiedades de cepas centenarias, en las que todos los trabajos se siguen haciendo manualmente. Estas cepas de Tempranillo viven en suelos pedregosos y poco f\u00e9rtiles sometidas a rigurosas temperaturas y grandes diferencias t\u00e9rmicas entre la noche y el d\u00eda.\nLa imagen de la botella refleja la singular personalidad de este vino premium. Se ha dise\u00f1ado una etiqueta especial para esta edici\u00f3n limitada, protagonizada por la ilustraci\u00f3n de un globo, que vuela por el cielo en una b\u00fasqueda incesante del mejor vi\u00f1edo de la zona. Este relato quiere enfatizar as\u00ed la importancia de las 8000 cepas centenarias que se han encontrado y seleccionado para elaborar este vino \u00fanico. La espectacular etiqueta, con predominio de tonos verdosos y ocres y con el nombre del vino estampado en oro, descansa en una botella de gran elegancia y car\u00e1cter.\nNota de cata\u00a0\u00a0\u00a0\u00a0\u00a0\nColor picota muy intenso, profundo, casi opaco.\nAromas muy penetrantes y de gran complejidad, entre los que destacan las notas de frutas roja entremezcladas con flores blancas y, especialmente, aromas de violeta. Tambi\u00e9n aparecen toques dulzones, mentolados, de pimienta y bosque bajo.\nEs un vino maduro, con elegancia natural. Amplio, potente, con taninos redondos y envolventes perfectamente integrados.\nDe gran persistencia y expresividad en boca.",
+    "precio": 22.0,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/crianza/8000-marques-de-burgos-cza-t-34/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2017/03/M_BURGOS_8000-300x399.jpg",
+    "enStock": false
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 23,
+  "fields": {
+    "codigoReferencia": "1319",
+    "titulo": "904  Gran Rerserva T. 3/4",
+    "descripcion": "Descripci\u00f3n del Producto\nLa Rioja Alta, S.A. Gran Reserva 904\nCrianza: En febrero de 2002 los vinos pasaron a barricas de roble americano de fabricaci\u00f3n propia de 4 a\u00f1os de edad, donde permanecieron hasta Mayo de 2006. Durante su crianza el vino se traseg\u00f3 cada seis meses por el m\u00e9todo tradicional de barrica a barrica. En Junio de 2006 se embotell\u00f3.\nCon el fin de preservar al m\u00e1ximo sus componentes organol\u00e9pticos, este vino fue sometido a una filtraci\u00f3n muy suave por lo que, con la edad, puede producir sedimentos.\nUvas: La variedad base es Tempranillo (90%) de vi\u00f1edos de m\u00e1s de 40 a\u00f1os y perfectamente complementado con un 10% de Graciano.\nEquilibrio ideal, tanto en grado alcoh\u00f3lico y acidez con unos \u00edndices de color muy id\u00f3neos, perfecto para largos envejecimientos en barrica y botella. El Consejo Regulador de la D.O. Ca. Rioja otorg\u00f3 su m\u00e1xima valoraci\u00f3n a esta a\u00f1ada: Excelente.\nColor rojo rub\u00ed, de capa media, con bordes teja, t\u00edpicos de los grandes cl\u00e1sicos de Rioja.\nMuy intenso de aroma, fresco, vibrante, con finas notas de frutas confitadas sobre un fondo bals\u00e1mico, especiado; cuero, caf\u00e9 y chocolate mentolado.\nBuena estructura, redondo y con taninos dulces elegantemente pulidos en su largo envejecimiento en barrica y botella.\nAmplio retrogusto que le concede un final suave y duradero. El vino de los grandes momentos.\nContenido: 75 Cl.\nGraduaci\u00f3n: 12,5% Vol.",
+    "precio": 38.0,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/rioja/904-gran-reserva/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/04/904-GRAN-RESERVA-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 24,
+  "fields": {
+    "codigoReferencia": "1802",
+    "titulo": "Aalto Cza. T. 3/4",
+    "descripcion": "Descripci\u00f3n del Producto\nEl vino Aalto Crianza es un vino 100% Tempranillo, es uno de los vinos tintos con la Denominaci\u00f3n de Origen: Ribera del Duero\nGraduaci\u00f3n: 14 % Vol.\nVolumen: 75 cl\nSe recomienda decantar antes de beber.\nIdeal con quesos curados.\nServir a 17-18 \u00baC\nEl vino Aalto Crianza es un vino equilibrado y complejo, con mucha personalidad. Tiene 91 puntos en la Gu\u00eda Robert\u00a0Parker.\nLa bodega Aalto es una bodega joven, pero llena de reconocimientos. Sus mentores: Mariano Garc\u00eda y Javier Zaccagnini.",
+    "precio": 30.55,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/crianza/aalto-cza-t-34/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2017/10/aalto-crianza-zoom-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 25,
+  "fields": {
+    "codigoReferencia": "3658",
+    "titulo": "Abad\u00eda Montserrat Brut",
+    "descripcion": "Descripci\u00f3n del Producto\nAbad\u00eda Montserrat Brut Reserva es el resultado de una elaboraci\u00f3n cuidada en el seno de la comunidad benedictina de Monstserrat que cont\u00f3 con el asesoramiento del Grupo Osborne en su elaboraci\u00f3n.\nElaborado con uva Parellada (50%), Macabeo (30%) y Xarel.lo (20%), tiene m\u00e1s de 15 meses de crianza y presenta un color amarillo p\u00e1lido brillante de burbuja persistente y buena formaci\u00f3n de corona, con predominio en nariz de frutas mediterr\u00e1neas, notas de pasteler\u00eda y fondo floral. Boca fresca, que nota la complejidad frutal, viva, arm\u00f3nica y con posgusto amargo agradable y persistente.\nAdem\u00e1s de aparecer en la Gu\u00eda Pe\u00f1\u00edn de los Cavas y Otras Burbujas, Abad\u00eda Monstserrat va a participar en el Primer Sal\u00f3n del Cava, donde distribuidores, sumilleres, tiendas especializadas y otros profesionales del sector van a descubrir y degustar las cualidades de este cava elaborado bajo la protecci\u00f3n de la monta\u00f1a de\u00a0Montserrat.",
+    "precio": 8.85,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/cavas/abadia-montserrat-brut/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2017/03/Abadia-de-Montserrat--300x342.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 26,
+  "fields": {
+    "codigoReferencia": "90",
+    "titulo": "ABERFELDY 21 A\u00d1OS",
+    "descripcion": "Descripci\u00f3n del Producto\nEl Whisky Aberfeldy 21 a\u00f1os es el Mejor Single Malt en World Whisky Awards 2007. Tiene 21 a\u00f1os de envejecimiento.\nEn el paladar suave, con toques a vainilla, muy refinado. Aroma a miel y a frutas; fresco y espeso. Final suave, con notas dulces.\nGraduaci\u00f3n: 40 % Vol.\nVolumen: 70 cl.",
+    "precio": 160.68,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/whisky/aberfeldy-21-anos-2/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2015/09/aberfeldy_21_year_old_ps-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 27,
+  "fields": {
+    "codigoReferencia": "1974",
+    "titulo": "Absenta  Tunel Yellow 80",
+    "descripcion": "Descripci\u00f3n del Producto\nAnisado amarillo, de alta graduaci\u00f3n, con extractos de ajenjo y matices c\u00edtricos (lima/lim\u00f3n).\nGraduaci\u00f3n: 70%\nTama\u00f1o: 70 cl",
+    "precio": 17.85,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/absenta/absenta-tunel-yellow-80/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2015/07/absenta-yellow-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 28,
+  "fields": {
+    "codigoReferencia": "132",
+    "titulo": "Absenta Deva 70 \u00ba",
+    "descripcion": "Descripci\u00f3n del Producto\nFicha T\u00e9cnica\u00a0\u00b7\u00a0Absenta\u00a0Deva\u00a070%\n\n\n\nCategor\u00eda:\nAbsenta (Destilados)\n\n\nProductor:\nDeva\n\n\nVolumen:\n70 cl\n\n\n\n\nVol. De Alcohol:\n70%\n\n\nPa\u00eds:\nEspa\u00f1a",
+    "precio": 13.65,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/absenta/absenta-deva-70-o/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2017/10/absenta-deva-70-484480_p-300x300.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 29,
+  "fields": {
+    "codigoReferencia": "1973",
+    "titulo": "Absenta Tunel Cannabis 80",
+    "descripcion": "Descripci\u00f3n del Producto\nAnisado verde, de alta graduaci\u00f3n, con extractos de l\u00fapulo y ajenjo.\nGraduaci\u00f3n: 70%\nTama\u00f1o: 70 cl",
+    "precio": 16.75,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/absenta/absenta-tunel-cannabis-80/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2015/07/absenta-cannabis-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 30,
+  "fields": {
+    "codigoReferencia": "3088",
+    "titulo": "Absenta Verde 70\u00ba J.Senaux",
+    "descripcion": "Descripci\u00f3n del Producto\nCaracter\u00edsticas\nAbsenta Green Jacques Senaux (70% alcohol) es una bebida de alta graduaci\u00f3n obtenida de la destilaci\u00f3n de varias plantas mediterr\u00e1neas, principalmente ajenjo (absenta), an\u00eds e hinojo. Es una bebida muy arom\u00e1tica, seca, que se puede tomar sola con agua como aperitivo, y que tambi\u00e9n es muy adecuada para mezclar. Contiene tuyonas.",
+    "precio": 17.0,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/absenta/absenta-verde-70o-j-senaux/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/absenta-jacques-senaux-green-tp_3460176146794891567f-206x399.jpg",
+    "enStock": false
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 31,
+  "fields": {
+    "codigoReferencia": "3587",
+    "titulo": "ABSENTA VERDE MUSSU",
+    "descripcion": "Descripci\u00f3n del Producto\nDistribuidor: Destilerias Acha.\nCapacidad: 70cl\nGraduaci\u00f3n alcoholica: 70%",
+    "precio": 12.7,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/absenta/absenta-verde-mussu/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/FullSizeRender-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 32,
+  "fields": {
+    "codigoReferencia": "448",
+    "titulo": "ABSOLUT",
+    "descripcion": "Descripci\u00f3n del Producto\nAbsolut Vodka se present\u00f3 por primera vez en Nueva York en 1979. R\u00e1pidamente se hizo muy popular en toda la ciudad, despu\u00e9s en Estados Unidos y en el mundo entero. Pero la receta que imprime a Absolut este sabor puro y natural tiene m\u00e1s de 30 a\u00f1os. Como el tarro de medicinas del S. XVIII que se encontr\u00f3 en una tienda de antig\u00fcedades de Estcolomo, que sirvi\u00f3 de inspiraci\u00f3n para el dise\u00f1o de la ic\u00f3nica botella de Absolut Vodka.\nAbsolut Vodka se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas, no contiene az\u00facar a\u00f1adido. Absolut es, de hecho, tan puro como puede ser el vodka. A\u00fan as\u00ed, la pureza tiene un sabor: rico, con cuerpo y complejo, pero suave y maduro con el car\u00e1cter distintivo del grano de trigo, seguido de un toque a frutas secas.\nLos ingredientes principales de Absolut Vodka son agua y trigo de invierno. El agua proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas. Este trigo de invierno se distingue de otras cosechas: se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto va creciendo bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo.",
+    "precio": 12.9,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/ABSOLUT-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 33,
+  "fields": {
+    "codigoReferencia": "3931",
+    "titulo": "Absolut Apeach 70 Cl.",
+    "descripcion": "Descripci\u00f3n del Producto\n\u00bfCu\u00e1l es el sabor real del aut\u00e9ntico melocot\u00f3n?\nAbsolut\u00a0Apeach\u00a0se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. Es suave y maduro, con el car\u00e1cter afrutado y sofisticado del melocot\u00f3n.\nEl modo\u00a0Absolut\u00a0de destilar Vodka\nEn 1879, Lars Olsson Smith introdujo la destilaci\u00f3n continua con la que destilo\u00a0Absolut\u00a0Rent Br\u00e4nnvin (Absolute Pure Vodka). En vez de destilar el vodka tres o cuatro veces, lo habitual, se destilaba un n\u00famero infinito de veces.\u00a0Absolut\u00a0Aapeach\u00a0se produce del mismo modo, la \u00fanica diferencia es el sabor a melocot\u00f3n. Y, al igual que el resto de la familia, se destila en \u00c5hus, el pueblo natal de L.O. Smith. Como nada va a cambiar, tampoco lo har\u00e1 el aut\u00e9ntico sabor de\u00a0Absolut\u00a0Apeach.\nManteniendo la pureza de los ingredientes naturales\nLos ingredientes principales de\u00a0Absolut\u00a0Apeach\u00a0son\u00a0Absolut\u00a0Vodka y aroma de melocot\u00f3n.\u00a0Absolut\u00a0Vodka se produce a partir de agua y trigo de inverno. El agua proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas. El trigo de invierno tambi\u00e9n se cosecha en \u00c5hus, pero es distinto a otros: se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto va creciendo bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo. Los melocotones son, como el resto de los ingredientes, totalmente naturales.",
+    "precio": 17.6,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-apeach-70-cl/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2017/12/absolut-apeach.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 34,
+  "fields": {
+    "codigoReferencia": "449",
+    "titulo": "Absolut Citron",
+    "descripcion": "Descripci\u00f3n del Producto\nAbsolut Citron fue una buena noticia para los amantes del \u201cvodka con hielo y una rodajita de lim\u00f3n\u201d all\u00e1 por los a\u00f1os 80 (que no eran pocos). Absolut Citron se lanz\u00f3 concretamente en 1988, nueve a\u00f1os despu\u00e9s de Absolut Original y dos a\u00f1os despu\u00e9s del primer miembro con sabor de la familia, Absolut Peppar. El \u00e9xito fue enorme entre los habituales de la rodajita de lim\u00f3n, aunque se convirti\u00f3 adem\u00e1s en el ingrediente principal del s\u00faper popular \u201cCosmopolitan\u201d.\n\nAbsolut Citron se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. En pocas palabras: Absolut Citron es suave y maduro, con toques frescos y afrutados de lima y lim\u00f3n y notas de c\u00e1scaras de lim\u00f3n.\n\n\nEl modo Absolut de destilar Vodka Citron\nEn 1879, Lars Olsson Smith introdujo la destilaci\u00f3n continua con la que destilo Absolut Rent Br\u00e4nnvin (Absolute Pure Vodka). En vez de destilar el vodka tres o cuatro veces, lo habitual, se destilaba un n\u00famero infinito de veces. Absolut Citron se produce del mismo modo, la \u00fanica diferencia es el sabor a lim\u00f3n. Y, al igual que el resto de la familia, se destila en \u00c5hus, el pueblo natal de L.O. Smith. Como nada va a cambiar, tampoco lo har\u00e1 el aut\u00e9ntico sabor de Absolut Citron.\n\n\nManteniendo la pureza\nLos ingredientes principales de Absolut Citron son Absolut Citron y aroma de lim\u00f3n. Absolut Vodka se produce a partir de agua y trigo de inverno. El agua proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas. El trigo de invierno tambi\u00e9n se cosecha en \u00c5hus, pero es distinto a otros: Se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto va creciendo bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo. Aunque el lim\u00f3n es el ingrediente principal, tambi\u00e9n se a\u00f1ade lima para imprimir a Absolut Citron su car\u00e1cter perfecto.",
+    "precio": 15.35,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-citron/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/absolut-citron-07l-300x300.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 35,
+  "fields": {
+    "codigoReferencia": "2611",
+    "titulo": "ABSOLUT COLORS",
+    "descripcion": "Descripci\u00f3n del Producto\nEstamos orgullosos de vestir una vez m\u00e1s nuestra botella ic\u00f3nica en la bandera del orgullo, originalmente dise\u00f1ado por el artista de San Francisco, Gilbert Baker en 1977, justo antes de Absolut Vodka Absolut era born.For, creemos en el derecho de expresarse de cualquier manera posible , que incluye ser capaz de amar a quien quieras a love.Creativity siempre ha estado en el centro de Absolut, y la diversidad de ir de la mano con eso. Un mundo donde todo el mundo es el mismo, no ser\u00eda nada divertido en absoluto, sino m\u00e1s bien un lugar bastante aburrido. Es por eso que Absolut es feliz de haber sido la celebraci\u00f3n de un colorido mundo desde que 1979.\n\nla colaboraci\u00f3n\nEn 1977, el artista Gilbert Baker, manifest\u00f3 su mensaje de solidaridad, el amor y el respeto a la diversidad a trav\u00e9s de la bandera del arco iris dise\u00f1\u00f3. Desde entonces, esta bandera no s\u00f3lo ha sido un s\u00edmbolo importante del movimiento LGBT, pero tambi\u00e9n uno que ha representado coloridas celebraciones, fiestas masivas y las mentes liberadas, tanto como Absolut. En 2008, la colaboraci\u00f3n entre la botella de edici\u00f3n limitada Absolut y Gilbert Baker, comenz\u00f3.En 2015, continuamos nuestra amistad y mostramos nuestros verdaderos colores.\n\n\nVodka absoluto\nAbsolut Colors contiene el mismo vodka sueco como una botella de vodka Absolut. Se hace exclusivamente a partir de ingredientes naturales, ya diferencia de algunos otros vodkas, no contiene az\u00facar a\u00f1adido. De hecho, Absolut es tan limpio como el vodka puede ser. A\u00fan as\u00ed, tiene un cierto sabor: rico, con cuerpo y complejo, pero suave y maduro con un car\u00e1cter distinto de cereales, seguido de un toque de frutos secos. Todo Absolut se hace en la misma destiler\u00eda, con trigo de los mismos campos, y el agua de nuestro propio pozo profundo.\n\n\nHistoria\nEn 1980, Absolut fue pionera entre las marcas, al mostrar su apoyo a la comunidad LGBT. Desde los primeros anuncios de Absolut corrieron en revistas como El Abogado eand despu\u00e9s de la oscuridad, los acontecimientos en bares LGBT, las donaciones a organizaciones ben\u00e9ficas y causas del VIH / SIDA, la publicidad al aire libre y el patrocinio de canales de televisi\u00f3n LGBT han seguido, y durante m\u00e1s de 35 a\u00f1os, Absolut ha sido un vodka para el orgullo y colorido.",
+    "precio": 35.99,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-colors/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/Absolut-colors-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 36,
+  "fields": {
+    "codigoReferencia": "452",
+    "titulo": "ABSOLUT KURANT",
+    "descripcion": "Descripci\u00f3n del Producto\nLa historia de Absolut Kurant tiene sus or\u00edgenes en el casis, una fruta t\u00edpica de Suecia, de la cual adquiere su sabor. Se lanz\u00f3 en 1992 en homenaje al origen sueco de Absolut. Absolut Kurant se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. Es suave y dulce, con un sabor afrutado propio del casis y un ligero toque de acidez.\nGraduaci\u00f3n: 40%\nTama\u00f1o: 1 L",
+    "precio": 18.97,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-kurant/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2015/07/absolut-kurant-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 37,
+  "fields": {
+    "codigoReferencia": "2646",
+    "titulo": "ABSOLUT KURANT",
+    "descripcion": "Descripci\u00f3n del Producto\nLa historia de Absolut Kurant tiene sus or\u00edgenes en el casis, una fruta t\u00edpica de Suecia, de la cual adquiere su sabor. Se lanz\u00f3 en 1992 en homenaje al origen sueco de Absolut.\n\n\u00bfCu\u00e1l es el sabor real del aut\u00e9ntico casis?\nAbsolut Kurant se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. Es suave y dulce, con un sabor afrutado propio del casis y un ligero toque de acidez.\n\n\nEl modo Absolut de destilar Vodka\nEn 1879, Lars Olsson Smith introdujo la destilaci\u00f3n continua con la que destil\u00f3 Absolut Rent Br\u00e4nnvin (Absolute Pure Vodka). Absolut Kurant es destilado una cantidad infinita de veces al igual que Absolut Original. Y como el resto de la familia, se destila en \u00c5hus, el pueblo natal de L.O. Smith.\n\n\nManteniendo la pureza de los ingredientes naturales\nLos ingredientes principales de Absolut Kurantson Absolut Vodka y aroma de casis. Absolut Vodka se produce a partir del agua que proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas y el trigo de invierno que tambi\u00e9n se cosecha en \u00c5hus, pero es distinto a otros: se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto crece bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo. El casis es, como el resto de los ingredientes, totalmente natural.",
+    "precio": 18.36,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-kurant-2/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/absolut_kurant-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 38,
+  "fields": {
+    "codigoReferencia": "2010",
+    "titulo": "ABSOLUT LEVEL",
+    "descripcion": "Descripci\u00f3n del Producto\nLevel, est\u00e1 elaborado en la misma destiler\u00eda de Absolut en Ah\u00fcs (Suecia). La cata de este vodka destaca su suavidad, un aroma a cedro y notas frutas c\u00edtricas.\nGraduaci\u00f3n: 40%\nTama\u00f1o: 1 L",
+    "precio": 30.4,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-level/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2015/07/absolut-level-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 39,
+  "fields": {
+    "codigoReferencia": "450",
+    "titulo": "Absolut Mandarina",
+    "descripcion": "Descripci\u00f3n del Producto\nAbsolut Mandrin\nAbsolut Mandrin se present\u00f3 en 1999, 20 a\u00f1os despu\u00e9s de Absolut Vodka. Se trata del cuarto vodka Absolut con sabor de la lista, detr\u00e1s de Peppar, Citron Y Kurant. Y como la mandarina y la naranja son dos de los sabores m\u00e1s populares del mundo, Absolut Mandrin fue recibido con el mismo entusiasmo que el resto de miembros de la familia.\n\n\u00bfCu\u00e1l es el sabor real del la aut\u00e9ntica mandarina?\nAbsolut Mandrin se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. Su sabor es complejo, suave, maduro con el car\u00e1cter de la naranja y la mandarina combinado con notas de c\u00e1scaras de naranja.\n\n\nEl modo Absolut de destilar Vodka\nEn 1879, Lars Olsson Smith introdujo la destilaci\u00f3n continua con la que destilo Absolut Rent Br\u00e4nnvin (Absolute Pure Vodka). En vez de destilar el vodka tres o cuatro veces, lo habitual, se destilaba un n\u00famero infinito de veces. Absolut Mandrin se produce del mismo modo, la \u00fanica diferencia es el sabor a naranja, mandarina y c\u00edtricos. Y, al igual que el resto de la familia, se destila en \u00c5hus, el pueblo natal de L.O. Smith. Como nada va a cambiar, tampoco lo har\u00e1 el aut\u00e9ntico sabor de Absolut Mandrin.\n\n\nManteniendo la pureza de los ingredientes naturales\nLos principales ingredientes de Absolut Mandrin son Absolut Vodka y aroma de naranja, mandarina y c\u00edtricos. Absolut Vodka se produce a partir de agua y trigo de inverno. El agua proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas. El trigo de invierno tambi\u00e9n se cosecha en \u00c5hus, pero es distinto a otros: se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto va creciendo bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo. Aunque la mandarina y la naranja son los aromas principales, se ha incorporado el aroma de otros c\u00edtricos para imprimir a Absolut Mandrin su car\u00e1cter perfecto.",
+    "precio": 14.2,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-mandarina/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/absolut-mandarin-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 40,
+  "fields": {
+    "codigoReferencia": "451",
+    "titulo": "Absolut Raspberri",
+    "descripcion": "Descripci\u00f3n del Producto\nLas frambuesas salvajes abundan en las colinas suecas, as\u00ed que la presentaci\u00f3n de Absolut Raspberri es algo natural que no pod\u00eda faltar. Y en 2004 se hizo realidad, 25 a\u00f1os despu\u00e9s de la aparici\u00f3n de Absolut Vodka.\n\n\u00bfCu\u00e1l es el sabor real de la aut\u00e9ntica frambuesa?\nAbsolut Rasberri se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. Es rico e intenso y ofrece el car\u00e1cter fresco y afrutado de las frambuesas maduras.\n\n\nEl modo Absolut de destilar Vodka\nEn 1879, Lars Olsson Smith introdujo la destilaci\u00f3n continua con la que destilo Absolut Rent Br\u00e4nnvin (Absolute Pure Vodka). En vez de destilar el vodka tres o cuatro veces, lo habitual, se destilaba un n\u00famero infinito de veces. Absolut Raspberri se produce del mismo modo, la \u00fanica diferencia es el sabor a frambuesa. Y, al igual que el resto de la familia, se destila en \u00c5hus, el pueblo natal de L.O. Smith. Como nada va a cambiar, tampoco lo har\u00e1 el aut\u00e9ntico sabor de Absolut Raspberri.\n\n\nManteniendo la pureza de los ingredientes naturales\nLos ingredientes principales de Absolut Raspberri son Absolut Vodka y aroma de frambuesa. Absolut Vodka se produce a partir de agua y trigo de inverno. El agua proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas. El trigo de invierno tambi\u00e9n se cosecha en \u00c5hus, pero es distinto a otros: Se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto va creciendo bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo. Las frambuesas son, como el resto de los ingredientes, totalmente naturales.",
+    "precio": 14.2,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-raspberri/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/0001153_vodka-absolut-raspberri-1l-300x399.jpeg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 41,
+  "fields": {
+    "codigoReferencia": "2799",
+    "titulo": "ABSOLUT VAINILLA 1l",
+    "descripcion": "Descripci\u00f3n del Producto\nAbsolut Vanilia se lanz\u00f3 en 2003. B\u00e1sicamente se debi\u00f3 a que es uno de los sabores que m\u00e1s gustan en todo el mundo. Lo que de hecho determin\u00f3 el que Absolut Vanilia se hiciera pronto casi igual de popular.\n\n\u00bfCu\u00e1l es el sabor real de la aut\u00e9ntica vainilla?\nAbsolut Vanilia se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. Absolut Vanilia es rico, con car\u00e1cter y complejo. Tiene un marcado sabor a vainilla, notas de caramelos butterscotch, de az\u00facar y mantequilla, y un ligero sabor a chocolate puro.\n\n\nEl modo Absolut de destilar vodka\nEn 1879, Lars Olsson Smith introdujo la destilaci\u00f3n continua con la que destilo Absolut Rent Br\u00e4nnvin (Absolute Pure Vodka). En vez de destilar el vodka tres o cuatro veces, lo habitual, se destilaba un n\u00famero infinito de veces. Absolut Vanilia se produce del mismo modo, la \u00fanica diferencia es el sabor a vainilla. Y, al igual que el resto de la familia, se destila en \u00c5hus, el pueblo natal de L.O. Smith. Como nada va a cambiar, tampoco lo har\u00e1 el aut\u00e9ntico sabor de Absolut Vanilia.\n\n\nManteniendo la pureza de los ingredientes naturales\nLos ingredientes principales de Absolut Vanilia son Absolut Vodka y aroma de vainilla. Absolut Vodka se produce a partir de agua y trigo de inverno. El agua proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas. El trigo de invierno tambi\u00e9n se cosecha en \u00c5hus, pero es distinto a otros: se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto va creciendo bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo. La vainilla es, como el resto de los ingredientes, totalmente natural.",
+    "precio": 19.4,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-vainilla-1l/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/ABSOLUT-VAINILLA-2-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 42,
+  "fields": {
+    "codigoReferencia": "3845",
+    "titulo": "Absolut Vainilla 70 Cl.",
+    "descripcion": "Descripci\u00f3n del Producto\n\u00bfCu\u00e1l es el sabor real de la aut\u00e9ntica vainilla?\nAbsolut Vanilia se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas de sabores, no contiene az\u00facar a\u00f1adido. Absolut Vanilia es rico, con car\u00e1cter y complejo. Tiene un marcado sabor a vainilla, notas de caramelos butterscotch, de az\u00facar y mantequilla, y un ligero sabor a chocolate puro.\nEl modo Absolut de destilar vodka\nEn 1879, Lars Olsson Smith introdujo la destilaci\u00f3n continua con la que destilo Absolut Rent Br\u00e4nnvin (Absolute Pure Vodka). En vez de destilar el vodka tres o cuatro veces, lo habitual, se destilaba un n\u00famero infinito de veces. Absolut Vanilia se produce del mismo modo, la \u00fanica diferencia es el sabor a vainilla. Y, al igual que el resto de la familia, se destila en \u00c5hus, el pueblo natal de L.O. Smith. Como nada va a cambiar, tampoco lo har\u00e1 el aut\u00e9ntico sabor de Absolut Vanilia.\nManteniendo la pureza de los ingredientes naturales\nLos ingredientes principales de Absolut Vanilia son Absolut Vodka y aroma de vainilla. Absolut Vodka se produce a partir de agua y trigo de inverno. El agua proviene de un profundo pozo de \u00c5hus, protegida contra las impurezas. El trigo de invierno tambi\u00e9n se cosecha en \u00c5hus, pero es distinto a otros: se siembra en oto\u00f1o y se recolecta en el siguiente. Mientras tanto va creciendo bajo la nieve sueca desarrollando un grano duro. Adem\u00e1s, el uso de fertilizantes es m\u00ednimo. La vainilla es, como el resto de los ingredientes, totalmente natural.",
+    "precio": 16.4,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/absolut-vainilla-70-cl/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2017/03/absolut-vainilla.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 43,
+  "fields": {
+    "codigoReferencia": "3619",
+    "titulo": "ABYSSAL",
+    "descripcion": "Descripci\u00f3n del Producto\nABYSSAL, NACE EL PRIMER VODKA ELABORADO CON VINO DE JEREZ.\nNace ABYSSAL, un genuino vodka, fruto de la destilaci\u00f3n de los vinos con m\u00e1s solera de la tierra del jerez. A diferencia de la mayor\u00eda de los vodkas del mercado, procedentes de cereales o patata, ABYSSAL es \u00fanico en su categor\u00eda, ya que tiene su origen en un muy cotizado vino de jerez, del tipo oloroso. Las bodegas Williams & Humbert lanzan al mercado este vodka, \u00fanico en el mundo, tras tres intensos a\u00f1os de investigaci\u00f3n. Para crear un vodka como ABYSSAL, de calidad superior y sabor excepcional, se ha combinado el empleo de las t\u00e9cnicas de destilaci\u00f3n m\u00e1s avanzadas con consagrados procesos tradicionales. Los alambiques utilizados en el proceso de destilaci\u00f3n, son los mismos que se emplean para la elaboraci\u00f3n del conocido y premiado internacionalmente Brandy solera gran reserva Gran Duque de Alba. La materia prima de la que nace ABYSSAL es un vino de jerez del tipo oloroso sometido a triple destilaci\u00f3n a 74\u00ba, con el fin conseguir la mayor pureza posible. Un vino potente, redondo y con mucho cuerpo, criado bajo el sistema tradicional de soleras y criaderas.\nComo una joya, el vodka ABYSSAL aguarda en el interior de una fant\u00e1stica perla negra para ser degustado por los m\u00e1s exigentes paladares. El envase, convertido en una original pieza de vidrio negro, guarda y protege un tesoro, algo \u00fanico y misterioso que ensambla perfectamente con lo que habita en su interior. Esta perla est\u00e1 engalanada por una pieza de metal plateada que en su centro luce la silueta de un narval; poderoso y m\u00edtico animal marino de presencia imponente, poseedor de un largu\u00edsimo colmillo que a muchos recuerda al cuerno del unicornio.\nABYSSAL se disfruta solo, sin hielo, pero siempre muy fr\u00edo. Al mismo tiempo, al ser tan puro y aunque pueda parecer parad\u00f3jico, combina de manera extraordinaria con otros sabores, destacando de forma especial el Bloody Mary. Otros c\u00f3cteles para disfrutar de ABYSSAL son el Urban Deep Blue, el Moscow Mule, el Narwal Song o el Abyssal Sunset.\nEn cuanto a la Nota de Cata, ABYSSAL es un vodka cristalino, limpio, suave y elegante en nariz. En boca es suave, con cuerpo, equilibrado, con ciertas notas especiadas de pimienta y una persistencia y finura que recuerda la caliza y la mineralidad. (40% Alc./Vol.)",
+    "precio": 37.8,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vodka/abyssal/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/02/Vodka-Abyssal-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 44,
+  "fields": {
+    "codigoReferencia": "464",
+    "titulo": "Advocaat Bols",
+    "descripcion": "Descripci\u00f3n del Producto\nEl advokaat o advocaat es una bebida muy similar al rompepe, que se consume en B\u00e9lgica\u00a0y Holanda. Se trata tambi\u00e9n de un licor\u00a0denso, preparado con huevo, brandy\u00a0o ginebra, aromatizado con vainilla, caf\u00e9 o chocolate. La graduaci\u00f3n de este licor esta entre 15 y 20 grados. El advokaat se prepara usando s\u00f3lo las yemas. Una variante muy poco conocida y extendida es la que se hace con el huevo completo, que es una versi\u00f3n menos espesa, aunque generalmente est\u00e1 destinada a la exportaci\u00f3n.\nMuchos holandeses gustan de servir el advokaat con una capa de nata montada\u00a0encima. Se sirve fr\u00edo y en servicio de licor, y agitado previamente.\nEn las Antillas\u00a0se mezclar\u00eda la pulpa del aguacate\u00a0con ron; y en algunas zonas, con ron envejecido (\u201coscuro\u201d) o sin envejecer (\u201cblanco\u201d o \u201ctransparente\u201d). Cuando esta costumbre se import\u00f3 a Europa, los aguacates, una fruta ex\u00f3tica imposible de encontrar entonces en Europa, se sustituyeron por huevo.",
+    "precio": 10.05,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/licores/advocaat-bols/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/05/Cocktails_with_Advocate-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 45,
+  "fields": {
+    "codigoReferencia": "2953",
+    "titulo": "Afilador Hierbas",
+    "descripcion": "Descripci\u00f3n del Producto\nLicor de Hierbas El Afilador elaborado con una\u00a0maceraci\u00f3n natural utilizando 6 tipos diferentes de hierbas naturales, seleccionadas cuidadosamente con el fin de conseguir el mejor aroma y equilibrio.\nDe color amarillo y brillante, con reflejos dorados. Olor profundo de arom\u00e1ticas hierbas naturales, y con fant\u00e1sticas propiedades digestivas que hacen del este licor de hierbas el colof\u00f3n ideal para una comida, o simplemente para consumir bien fresco en copa con hielo o en vaso de chupito.\nCapacidad: 70cl",
+    "precio": 7.65,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/licores/afilador-hierbas/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/05/licor-de-orujo-de-hierbas-el-afilador-70cl-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 46,
+  "fields": {
+    "codigoReferencia": "155",
+    "titulo": "AFILADOR HIERBAS 1L",
+    "descripcion": "Descripci\u00f3n del Producto\nEl Afilador\u00a0se elabora en maceraci\u00f3n natural con 6 tipos distintos de hierbas naturales cuidadosamente seleccionadas para conseguir el mejor equilibrio y aroma.\nSu color es amarillo y brillante, con reflejos dorados. Con un profundo olor a arom\u00e1ticas hierbas naturales, posee excelentes propiedades digestivas que le convierten en el mejor final para una comida, para consumir en copa con hielo o en vaso de chupito.",
+    "precio": 9.7,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/orujo/afilador-hierbas-1l/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/03/licor-de-orujo-de-hierbas-el-afilador-70cl-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 47,
+  "fields": {
+    "codigoReferencia": "0003118",
+    "titulo": "Agua de Buda para aromatizar tu gin tonic",
+    "descripcion": "Descripci\u00f3n del Producto\nWilliams & Humbert ha lanzado un difusor de Agua de buda, o lo que es lo mismo, un \u2018spray\u2019 de aceites esenciales del ex\u00f3tico c\u00edtrico mano de buda.\nDe un tiempo a esta parte se ha popularizado la costumbre de rociar las copas de Gin Tonic con diferentes tipos de esencia o extractos para aromatizar y dar un toque distinto, m\u00e1s all\u00e1 de una c\u00e1scara de c\u00edtrico sobre el filo o unas bayas de enebro en su interior, por poner unos ejemplos.\nEn este sentido, Williams & Humbert ha presentado un difusor de Agua de buda, una especie despray para pulverizar esencia del ex\u00f3tico c\u00edtrico mano de buda que forma parte de su ginebra,Botanic Gin, de la que alguna vez te hemos hablado en Ginebras.net. Esta esencia de mano de buda se obtiene de la maceraci\u00f3n de la piel del c\u00edtrico en alcohol de trigo de procedencia inglesa.\nDe este modo es posible extraerse los aceites esenciales de la mano de buda y se consigue la llamada Agua de buda, que seg\u00fan apuntan desde Williams & Humbert, est\u00e1 especialmente recomendada para ser pulverizada y aromatizar el filo de un Gin Tonic, los hielos de este o todo a la vez.\nLa comercializaci\u00f3n del difusor de Agua de buda va a realizarse progresivamente empezando por canales gourmet y dedicados a la hosteler\u00eda especialmente.",
+    "precio": 9.7,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/ginebra/agua-de-buda-para-aromatizar-tu-gin-tonic/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2016/01/agua-de-buda-botanic-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 48,
+  "fields": {
+    "codigoReferencia": "4026",
+    "titulo": "Aguadulce Villalua Bco. 3/4",
+    "descripcion": "Descripci\u00f3n del Producto\nDATOS T\u00c9CNICOS:",
+    "precio": 3.55,
+    "origen": "Desconocido",
+    "cantidad": "Sin determinar",
+    "graduacion": null,
+    "urlProducto": "http://lacasadeloslicores.es/tienda/vinos-blancos/aguadulce-villalua-bco-34/",
+    "urlImagen": "http://lacasadeloslicores.es/wp-content/uploads/2018/07/aguadulce-300x399.jpg",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 49,
+  "fields": {
+    "codigoReferencia": "1532",
+    "titulo": "100 PIPERS LITRO",
+    "descripcion": "\nEs un whisky escoc\u00e9s, el primer blended de la Chivas Brothers, producido por una mezcla de entre unos 25-30 whiskies de malta cuidadosamente seleccionados.\u00a0100 Pipers fue vendido en el a\u00f1o 1949 por Chivas Brothers, su creadora, a Seagrams.\nEste whisky blended escoc\u00e9s toma el nombre de una antigua leyenda escocesa que dice que cuando uno consume un buen whisky de Escocia escucha la m\u00fasica de una gaita. Pero si este es un whisky escoc\u00e9s verdaderamente bueno, entonces escucha el sonido de cien gaitas. De esta afirmaci\u00f3n viene su nombre.\nSi tiene alguna duda de c\u00f3mo comprar 100 Pipers litro p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 15.65,
+    "origen": "Escocia",
+    "cantidad": "1.70 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/100-pipers-litro/",
+    "urlImagen": "https://i2.wp.com/marianomadrueno.es/wp-content/uploads/2013/06/100-pepers-scotch-whisky.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 50,
+  "fields": {
+    "codigoReferencia": "889",
+    "titulo": "12 LUNAS (Somontano)",
+    "descripcion": "",
+    "precio": 8.85,
+    "origen": "Barbastro",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/12-lunas-somontano/",
+    "urlImagen": "https://i1.wp.com/marianomadrueno.es/wp-content/uploads/2013/05/12_lunas_somontano_vinsom_bodegas.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 51,
+  "fields": {
+    "codigoReferencia": "914",
+    "titulo": "12 VOLTS TIERRA DE MALLORCA (Mallorca)",
+    "descripcion": "\n12 Volts funciona como acumulador de energ\u00eda. Es un vino que conecta con el sistema nervioso y recarga las bater\u00edas. Esta transformaci\u00f3n propia de la energ\u00eda, es el origen del nombre 12 Volts.\nSi tiene alguna duda de c\u00f3mo comprar online el vino 12 Volt Tierra de Mallorca p\u00f3ngase en contacto con el profesional de Mariano Madrue\u00f1o en nuestra secci\u00f3n de contacto.",
+    "precio": 16.95,
+    "origen": "Mallorca",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/12-volts-tierra-de-mallorca-mallorca/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/12-volts-tierra-de-mallorca-vino-tinto3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 52,
+  "fields": {
+    "codigoReferencia": "555",
+    "titulo": "1551 BRUT NATURE DE CODORNIU (Cava)",
+    "descripcion": "\n1551 Brut Nature de Codorniu es un cava \u00fanico, de los vinos de base de las tres variedades fundamentan la personalidad de este cava; combina las suaves notas afrutadas con la elegancia y sutileza de la Parellada y la estructura de la Macabeo.\nUn cava fresco y equilibrado, con suaves aromas frutales y notas c\u00edtricas que armonizan con los matices a pan tostado y miel.\nEs perfecto para el aperitivo y para acompa\u00f1ar cualquier receta de inspiraci\u00f3n marinera.\nSi tiene alguna duda de c\u00f3mo comprar online el cava 1551 Brut Nature de Codorniu p\u00f3ngase en contacto con el profesional de Mariano Madrue\u00f1o en nuestra secci\u00f3n de contacto.\nLeer m\u00e1s sobre 1551 Brut Nature de Codorniu",
+    "precio": 5.95,
+    "origen": "Sant Sadurni d'Anoia (Barna)",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/1551-brut-nature-de-codorniu-cava/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/1551_brut_codorniu3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 53,
+  "fields": {
+    "codigoReferencia": null,
+    "titulo": "1800 REPOSADO",
+    "descripcion": "\nEs un tequila reposado o aged, como bien indica su nombre, que se elabora con 100 % agave azul. 1800 reposado es uno de los m\u00e1s vendidos del mundo.\nEl color de este tequila es entre \u00e1mbar y miel; en nariz, resulta dulz\u00f3n, con predominio de notas a caramelo, vainilla y tambi\u00e9n c\u00e1scara de naranja. El sabor de este tequila 1800 Reposado es equilibrado y redondo, con otras dulzonas que se combinan con especias.\nLa maduraci\u00f3n del 1800 Reposado se realiza en barricas de roble franc\u00e9s y americano durante un lapso de tiempo de c\u00f3mo m\u00ednimo 6 meses.\nSe presenta en la cl\u00e1sica botella piramidal de 1800, trasparente, con el agave grabado en la base y, en este caso, con una etiqueta amarilla con detalles en rojo. Tiene una capacidad de 70 centilitros y una graduaci\u00f3n alcoh\u00f3lica del 40 %.\nSi tienes dudas de c\u00f3mo comprar 1800 reposado ponte en contacto con nuestro personal en la secci\u00f3n de contacto.",
+    "precio": 27.2,
+    "origen": "M\u00e9xico",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-tequila-1800-reposado/",
+    "urlImagen": "https://i1.wp.com/marianomadrueno.es/wp-content/uploads/cm/1800-tequila-reposado-mexico3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 54,
+  "fields": {
+    "codigoReferencia": "765",
+    "titulo": "200 MONJES (Rioja)",
+    "descripcion": "\nhttp://www.vinicolareal.com/historia.php",
+    "precio": 39.55,
+    "origen": "Albelda de Iregua (La Rioja)",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/200-monjes-rioja/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/200_Monges_Reserva_rioja3.jpg?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 55,
+  "fields": {
+    "codigoReferencia": null,
+    "titulo": "24 MOZAS (Toro)",
+    "descripcion": "\nLas 24 mozas protagonizan la copla T\u00edo Bab\u00fa, una canci\u00f3n en la que se relata la historia de una tradicional boda toresana a la que no \u00abiban 24, iban 25 porque iba la novia\u00bb. Un homenaje a la ciudad de Toro y su rico folclore. Los hist\u00f3ricos vi\u00f1edos de la Vega de Toro y la melod\u00eda de \u2018T\u00edo Bab\u00fa\u2019 resurgen al descorchar cada botella de 24 mozas.\nUn vino hecho a partir de cepas de Tinta de Toro de al menos \u00a040 a\u00f1os, ha permanecido en barricas de roble americano durante seis meses para conseguir una mayor longevidad sin perder frescor y alegr\u00eda. Rojo granate de capa alta y ribete p\u00farpura\u00a0limpio. Intensidad media alta. Marcados tonos frutales con recuerdos a frutas negras muy maduras (moras), notas de coco y atisbos de especias. En boca es seco, con acidez adecuada, bien constituido, sabroso con buena textura (tanicidad noble y ajustada de la madera a la fruta). Final frutal grato levemente especiado. Buena persistencia. Ya para tomar, pero susceptible de mejora en botella.\nSi tiene dudas de c\u00f3mo comprar 24 mozas p\u00f3ngase en contacto con nuestro personal de atenci\u00f3n al cliente.",
+    "precio": 8.35,
+    "origen": "Desconocido",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-24-mozas-toro/",
+    "urlImagen": "https://i1.wp.com/marianomadrueno.es/wp-content/uploads/2017/12/24-mozas-vino-roble-toro.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 56,
+  "fields": {
+    "codigoReferencia": "396",
+    "titulo": "4 KILOS (V. T. de Mallorca)",
+    "descripcion": "\nLa maceraci\u00f3n dur\u00f3 aproximadamente 20 d\u00edas. La fermentaci\u00f3n malol\u00e1ctica se realiz\u00f3 en barrica de 225l. y en dep\u00f3sito de acero inoxidable.\n14 meses de crianza en barricas nuevas de roble franc\u00e9s Allier, Vosges y Nevers de tostado medio y medio plus.\nSi tiene alguna duda de c\u00f3mo comprar online el vino 4 Kilos p\u00f3ngase en contacto con el profesional de Mariano Madrue\u00f1o en nuestra secci\u00f3n de contacto.",
+    "precio": 32.2,
+    "origen": "Mallorca",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/4-kilos-v-t-de-mallorca/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/4-kilos-mallorca-vino-alta-expresion3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 57,
+  "fields": {
+    "codigoReferencia": "1036",
+    "titulo": "5 MINIATURAS ABSENTA TUNEL",
+    "descripcion": "\nLas 5 Miniaturas Absenta Tunel de 80\u00aa es uno de nuestros estuches m\u00e1s solicitados. Para todos los que quer\u00e1is probar diferentes sabores de una de las mejores absentas de Mallorca. No lo dud\u00e9is, es una de las mejores oportunidades. Un incre\u00edble precio en su su completo estuche.\n5 Botellines surtidos miniaturas de Absentas Le Diable. Imprescindible para coleccionistas.\n5 Botellines de 4 cl.\nSi tiene alguna duda de c\u00f3mo comprar 5 miniaturas absenta Tunel p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 9.75,
+    "origen": "Mallorca",
+    "cantidad": "0.00 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/5-miniaturas-tunel/",
+    "urlImagen": "https://i2.wp.com/marianomadrueno.es/wp-content/uploads/cm/cinco-miniaturas-absenta-tunel-803.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 58,
+  "fields": {
+    "codigoReferencia": "1756",
+    "titulo": "575 UVAS (Salamanca)",
+    "descripcion": "\nEste vino se elabora con s\u00f3lo uvas procedentes de las cepas viejas del vi\u00f1edo ubicado en \u201cla Mata Francia\u201d y \u201cEl Ahumado\u201d situados a 700 metros de altitud. En estas dos parcelas los suelos est\u00e1n compuestos fundamentalmente de arena gran\u00edtica.\nComposici\u00f3n varietal: 47% Tempranillo, 38% Rufete, 15% Garnacha\nEnvejecimiento: 16 meses\nGrado alcoh\u00f3lico: 14.5% Vol.",
+    "precio": 20.3,
+    "origen": "Salamanca",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/575-uvas-salamanca/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/575-uvas-vino-reserva-salamanca3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 59,
+  "fields": {
+    "codigoReferencia": "1153",
+    "titulo": "6 O\u2019CLOCK",
+    "descripcion": "\nLa ginebra 6 O\u2019Clock es una ginebra Premium, tipo London Dry, obtenida por destilaci\u00f3n individual de cada componente bot\u00e1nico con posterior mezcla.Los bot\u00e1nicos utilizados son enebro, corteza de naranja, cilantro, ang\u00e9lica, ra\u00edz de lirio y flor de sa\u00faco. El producto final, es limpio, fresco y suave, predominando en su sabor el enebro y los c\u00edtricos. Esta ginebra est\u00e1 fabricada por Bramley & Gage Ltd. en el Reino Unido. La circunstancia de su nombre, es que el abuelo del actual fabricante, solo beb\u00eda ginebra a partir de las seis de la tarde. Se presenta en una botella cl\u00e1sica de vino, transparente, de 70 cl. Ha recibido tres estrellas en los Great Taste Awards del a\u00f1o 2010.\nGraduaci\u00f3n alcoh\u00f3lica: 43 % vol.\nSi tiene alguna duda de c\u00f3mo comprar 6 O\u2019clock p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 18.95,
+    "origen": "Inglaterra",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-6-oclock/",
+    "urlImagen": "https://i2.wp.com/marianomadrueno.es/wp-content/uploads/2013/06/6-O-clock-ginebra-premium-inglesa.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 60,
+  "fields": {
+    "codigoReferencia": "1754",
+    "titulo": "7 FUENTES (Orotava)",
+    "descripcion": "\nEs un vino tinto elaborado con el ensamblaje de la variedad 90% List\u00e1n Negro y 10% Tintinilla, de cepas sentre los 10 y 100 a\u00f1os, procedentes de las parcelas Los Geranios, El Montijo y Los Pasitos, en el Valle de La Orotava (Tenerife, Islas Canarias).\nCada variedad es cosechada y fermentada por separado. La vinificaci\u00f3n comienza con la fermentaci\u00f3n alcoh\u00f3lica, en la que se utilizan levaduras aut\u00f3ctonas, y se realiza en dep\u00f3sitos de acero inoxidable a temperatura controlada. La fermentaci\u00f3n malol\u00e1ctica se reparte entre peque\u00f1os dep\u00f3sitos de hormig\u00f3n y barricas de roble franc\u00e9s de 500 litros de capacidad. La crianza se lleva a cabo el 25% en peque\u00f1os dep\u00f3sitos de hormig\u00f3n y en fudres de roble franc\u00e9s, a lo largo de 8 meses. Grado: 13 % vol.Notas de cata: Color cereza picota muy intenso. En nariz destacan las frutas rojas, con notas especiadas y minerales. La entreda en boca es aterciopelada y golosa, con un final largo, afrutado y fresco.",
+    "precio": 11.7,
+    "origen": "Suertes del Marqu\u00e9s",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-vino-7-fuentes-orotava/",
+    "urlImagen": "https://i2.wp.com/marianomadrueno.es/wp-content/uploads/cm/7-fuentes-suertes-del-marques-vino-crianza3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 61,
+  "fields": {
+    "codigoReferencia": "2120",
+    "titulo": "7 NAVAS ROBLE (V. T. Castilla Y Le\u00f3n)",
+    "descripcion": "\nEs un vino tinto que junta la pureza varietal de la Garnacha con un toque de barrica para que acompa\u00f1e y nunca se superponga. Despu\u00e9s de seleccionados los racimos en la mesa de selecci\u00f3n, los racimos son despalillados, estrujados y encubados en dep\u00f3sitos de acero inoxidable de 5.000 litros, donde fermenta con levadura aut\u00f3ctona y tuvo una maceraci\u00f3n de 18 d\u00edas.\nUn vino de la tierra de Castilla y Le\u00f3n inolvidable. No te pierdas el precio de 7 Navas Roble en nuestra tienda online.",
+    "precio": 6.25,
+    "origen": "Navaluenga (Castilla y Le\u00f3nO",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/7-navas-roble-vino-castilla-y-leon/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/7-navas-roble-vino-tinto3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 62,
+  "fields": {
+    "codigoReferencia": "771",
+    "titulo": "904 GRAN RESERVA (Rioja)",
+    "descripcion": "\nEl proceso de maduraci\u00f3n de 904 Gran Reserva fue lento y pausado, lo que propici\u00f3 uvas con un inmejorable estado sanitario y una calidad que alcanz\u00f3 su punto \u00f3ptimo durante la vendimia. El vino elaborado presenta un equilibrio ideal, tanto en grado alcoh\u00f3lico y acidez con unos \u00edndices de color muy id\u00f3neos, perfecto para largos envejecimientos en barrica y botella. El Consejo Regulador de la D.O. Ca. Rioja otorg\u00f3 su m\u00e1xima valoraci\u00f3n a esta a\u00f1ada: Excelente. El vino de los grandes momentos.\nLa climatolog\u00eda durante el ciclo vegetativo result\u00f3 \u00f3ptima para el desarrollo de las vi\u00f1as. Las lluvias durante los primeros meses, m\u00e1s intensas hasta abril e inferiores durante el resto de la primavera y verano, permitieron una excepcional evoluci\u00f3n del vi\u00f1edo. Las parcelas m\u00e1s viejas, emplazadas en suelos sueltos y \u00e1ridos, tuvieron un cuajado inferior a a\u00f1os precedentes debido a las altas temperaturas, resultando unos racimos con granos de menor tama\u00f1o y con una buena relaci\u00f3n pulpa-hollejo, aspecto importante para obtener un fruto de gran calidad.\nLa variedad base es Tempranillo (90%) de vi\u00f1edos de m\u00e1s de 40 a\u00f1os de las zonas de Bri\u00f1as, Labastida y Villalba perfectamente complementado con un 10% de Graciano de nuestras fincas Melchor\u00f3n I y II de Briones y Rodezno.\nLas fermentaciones alcoh\u00f3lica y malol\u00e1ctica se desarrollaron sin contratiempos. En febrero de 2002 los vinos pasaron a barricas de roble americano de fabricaci\u00f3n propia de 4 a\u00f1os de edad donde permanecieron hasta Mayo de 2006. Durante su crianza el vino se traseg\u00f3 cada seis meses por el m\u00e9todo tradicional de barrica a barrica. En Junio de 2006 se embotell\u00f3. Con el fin de preservar al m\u00e1ximo sus componentes organol\u00e9pticos, este vino fue sometido a una filtraci\u00f3n muy suave por lo que, con la edad, puede producir sedimentos.\nColor rojo rub\u00ed, de capa media, con bordes teja, t\u00edpicos de los grandes cl\u00e1sicos de Rioja. Muy intenso de aroma, fresco, vibrante, con finas notas de frutas confitadas sobre un fondo bals\u00e1mico, especiado; cuero, caf\u00e9 y chocolate mentolado. Buena estructura, redondo y con taninos dulces elegantemente pulidos en su largo envejecimiento en barrica y botella. Amplio retrogusto que le concede un final suave y duradero.\nLeer m\u00e1s sobre 904 Gran Reserva\nSi tiene alguna duda de c\u00f3mo comprar 904 Gran Reserva p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 40.35,
+    "origen": "Haro (La Rioja)",
+    "cantidad": "1.40 kg",
+    "graduacion": 10.0,
+    "urlProducto": "https://marianomadrueno.es/producto/904-gran-reserva-rioja/",
+    "urlImagen": "https://i1.wp.com/marianomadrueno.es/wp-content/uploads/cm/Gran_reserva_904_rioja_alta3.jpg?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 63,
+  "fields": {
+    "codigoReferencia": "703",
+    "titulo": "AALTO CRIANZA (Ribera del Duero)",
+    "descripcion": "\n23 meses barrica roble frances nuevas y de un a\u00f1o.\nEs un vino color rojo cereza. \u00a0Aromas a madera, fruta negra, regaliz, toques bals\u00e1micos y notas minerales.Boca: fruta negra, toffee, regaliz y los toques minerales. Taninos sabrosos y agradables. Final largo y persistente con un postgusto bals\u00e1mico y mineral.\nSi tiene alguna duda de c\u00f3mo comprar online el vino Aalto crianza p\u00f3ngase en contacto con el profesional de Mariano Madrue\u00f1o en nuestra secci\u00f3n de contacto.",
+    "precio": 35.75,
+    "origen": "Roa del Duero (Burgos)",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/aalto-crianza-ribera-del-duero/",
+    "urlImagen": "https://i1.wp.com/marianomadrueno.es/wp-content/uploads/cm/aalto-crianza-ribera-del-duero-vino-tinto3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 64,
+  "fields": {
+    "codigoReferencia": "470",
+    "titulo": "ABADIA RETUERTA SEL ESP (V. T. Castilla)",
+    "descripcion": "\nEs el vino de Abad\u00eda Retuerta m\u00e1s conocido mundialmente. Abad\u00eda Retuerta Selecci\u00f3n Especial est\u00e1 producido a partir de la selecci\u00f3n de las mejores uvas de cada uno de nuestros pagos, combina la riqueza del Tempranillo y la elegancia del Cabernet Sauvignon con la redondez de la Merlot. Digno fruto de la vid y de un trabajo bien hecho. Con un estilo propio que se mantiene a\u00f1ada tras a\u00f1ada. Un vino elaborado a partir de la selecci\u00f3n de las mejores uvas de cada uno de sus pagos, que combina la riqueza de la Tempranillo, la intensidad de la Syrah y la elegancia de la Cabernet sauvignon. El resultado es armonioso y placentero. No es una exageraci\u00f3n nuestra, s\u00f3lo hay que mirar las altas valoraciones otorgadas por parte de nuestros socios en cada una de sus a\u00f1adas, que lo sit\u00faan entre los vinos mejor valorados y m\u00e1s vendidos en nuestra web.\nVariedades: 70% Tempranillo, 17% Syrah, 13% Cabernet sauvigno.\nGraduaci\u00f3n alcoh\u00f3lica: 14,5% vol.\nUn vino premiado en el International Wine Challenge de Londres como el mejor tinto del mundo en 2005. Es un vino muy equilibrado, arm\u00f3nico, de gran riqueza arom\u00e1tica e incre\u00edble expresividad.\nSi tiene alguna duda de c\u00f3mo comprar Abad\u00eda Retuerta Selecci\u00f3n Especial p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 21.75,
+    "origen": "Desconocido",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/abadia-retuerta-sel-esp-v-t-castilla/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/2013/05/abadia-retuerta-seleccion-especial-vino-de-la-tierra-de-castilla.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 65,
+  "fields": {
+    "codigoReferencia": "938",
+    "titulo": "ABERFELDY 12 A\u00d1OS LITRO",
+    "descripcion": "\nEl whisky escoc\u00e9s Aberfeldy es de la misma casa Dewar\u2019s, una casa tradicional con unos procesos de elaboraci\u00f3n siguiendo los patrones cl\u00e1sicos para la elaboraci\u00f3n de los mejores whiskies escoceses del mundo.\nEn esta ocasi\u00f3n tenemos un Aberfeldy single malt de 12 a\u00f1os con una inmensa y extraordinaria calidad. Este whisky escoc\u00e9s acaba el proceso organol\u00e9pticamente con el proceso de a\u00f1ejar durante un m\u00ednimo de estos 12 a\u00f1os en barricas seleccionadas para mantener los est\u00e1ndares de calidad.\nEl color del cuerpo del whisky es oro, con unos reflejos preciosos. En nuestra nariz se mostrar\u00e1 por las notas afrutadas y melosas, con unos toques y refinados de incienso y cereal, una mezcla de aromas incre\u00edblemente equilibrada todo con el alcohol.\nEn nuestro paladar tendremos una crema aunque a la vez ligero y envolvente. Las notas picantes las encontraremos m\u00e1s al final, as\u00ed como las amargantes.\nSi tienes dudas de c\u00f3mo comprar Aberfeldy 12 a\u00f1os litro p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 39.95,
+    "origen": "Escocia",
+    "cantidad": "1.80 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-aberfeldy-12-anos-litro/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/aberfeldy-12-anos-whisky-1-litro3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 66,
+  "fields": {
+    "codigoReferencia": "1571",
+    "titulo": "ABERLOUR 10 A\u00d1OS",
+    "descripcion": "\nEs un whisky realmente suave y delicado, que enseguida nos hace olvidar la dureza del whisky de grano presente en los tradicionales blends. Est\u00e1 madurado en una combinaci\u00f3n de barricas de Jerez y Bourbon durante un m\u00ednimo de 10 A\u00f1os.\nGraduaci\u00f3n: 40\u00ba.",
+    "precio": 29.75,
+    "origen": "Speyside",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/aberlour-10-anos/",
+    "urlImagen": "https://i1.wp.com/marianomadrueno.es/wp-content/uploads/cm/aberlour-10-anos-whisky-escoces-70-cl3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 67,
+  "fields": {
+    "codigoReferencia": "2989",
+    "titulo": "ABERLOUR 12 A\u00d1OS LITRO",
+    "descripcion": "\nEs un whisky envejecido exclusivamente en barricas que han contenido Jerez Oloroso, una de las barricas mas preciadas y costosas para envejecer whiskies single malt. La destiler\u00eda fue fundada en 1879 por James Fleming, quien se empe\u00f1\u00f3 en contruirla en el lugar del molino de St Drostan para asegurar el suministro ininterrumpido de agua pura. Cuando el periodista Alfred Barnard visit\u00f3 Aberlour en 1880, como parte de su exaustivo examen de destiler\u00edas de whisky Escocesas, describi\u00f3 la nueva destiler\u00eda de James Fleming como \u00abuna destiler\u00eda moderna perfecta\u00bb.\nEn 1898 un incendio destruy\u00f3 varios de los edificios de la destiler\u00eda y gran parte de las reservas de whisky. Bajo la supervisi\u00f3n del primer dise\u00f1ador Escoc\u00e9s de destiler\u00edas de whisky, Charles Doig de Elgin, la Destiler\u00eda Aberlour fue reconstrida.\nDespu\u00e9s de mas de 100 a\u00f1os, la modernizaci\u00f3n y la tecnolog\u00eda, el paisaje de la destiler\u00eda ha sido inevitablemente alterado pero la mayor\u00eda de las caracter\u00edsticas originales se mantienen all\u00ed y el m\u00e9todo de trabajo tradicional del lugar se mantiene inalterado. La \u00faltima mejora es el nuevo centro de visitantes, The Fleming Rooms, llamado as\u00ed en honor del fundador de la destiler\u00eda. Y en en nuestra tienda online, el Aberlour reserva 12 a\u00f1os al mejor precio.\nSi tienes dudas de c\u00f3mo comprar Aberlour 12 a\u00f1os litro p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 42.8,
+    "origen": "Speyside",
+    "cantidad": "1.50 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-aberlour-12-anos-litro/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/aberlour-12-anos-litro-whisky3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 68,
+  "fields": {
+    "codigoReferencia": null,
+    "titulo": "ABRACADABRA (Toro)",
+    "descripcion": "\nAbracadabra, y la botella atrap\u00f3 toda la esencia del vino. La Magia de la uva\u00a0Tinta de Toro\u00a0y la sabidur\u00eda de siglos elaborando vino logra el conjuro perfecto.\nAbracadabra, y el secreto en la copa, un vino de verdad, con el car\u00e1cter del Duero, expresi\u00f3n equilibrada, franqueza en su aroma, amplio sabor y un brillo \u00fanico en su color rojo.\nAbracadabra, encierra la tradici\u00f3n de celt\u00edberos y romanos, la suerte de un\u00a0vino\u00a0de dioses, reyes y poetas. Un hechizo prodigioso para acabar con todos los males.\nElaborado con la variedad aut\u00f3ctona Tinta de Toro 100% procedentes de cepas de 80 a\u00f1os con un cultivo totalmente ecol\u00f3gico y respetuoso con el medio ambiente, donde reina la paz y la tranquilidad en la vi\u00f1a, aqu\u00ed se crea la f\u00f3rmula m\u00e1gica que se esconde en los suelos de la Denominaci\u00f3n de Origen Toro, suelos pobres d\u00f3nde la cepa tendr\u00e1 que profundizar para conseguir los minerales que necesita para luego expresarse en la copa.\nSi tiene dudas de c\u00f3mo comprar Abracadabra p\u00f3ngase en contacto con nuestro personal de atenci\u00f3n al cliente.",
+    "precio": 10.7,
+    "origen": "Desconocido",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-abracadabra-vino-toro/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/2017/12/abracadabra-vino-tinto-toro.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 69,
+  "fields": {
+    "codigoReferencia": "265",
+    "titulo": "ABSOLUT",
+    "descripcion": "\nAbsolut es un vodka sueco obtenido por un proceso de destilaci\u00f3n de alcohol de grano de trigo denominado rectificaci\u00f3n. Se presenta en una botella cil\u00edndrica, transparente, sin etiqueta, con el nombre grabado en letras azules y una corona en el cuello con una medalla con la imagen de su fundador. Se embotella en capacidades de 700 ml y 1 l. Esta botella ha sido durante mucho tiempo el objeto fundamental de su publicidad.\nSe empez\u00f3 a producir en 1879 en el pueblo sueco de \u00c5hus por Lars Olson Smith, con el nombre de Absolut Rent Br\u00e4nvin (vodka absolutamente puro), comenzando a exportarse fuera de sus fronteras en el a\u00f1o 1979, convirti\u00e9ndose en uno de los vodkas m\u00e1s consumidos del mundo, en especial en Estados Unidos, gracias a destacad\u00edsimas campa\u00f1as de marketing. En la actualidad es propiedad del grupo Pernod Ricard.\nGraduaci\u00f3n alcoh\u00f3lica: 40% vol.\nSi tiene alguna duda de c\u00f3mo comprar Absolut p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 13.25,
+    "origen": "Suecia",
+    "cantidad": "1.40 kg",
+    "graduacion": 40.0,
+    "urlProducto": "https://marianomadrueno.es/producto/absolut/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/2013/06/absolut-vodka.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 70,
+  "fields": {
+    "codigoReferencia": "1995",
+    "titulo": "ABSOLUT LEVEL BOTELL\u00d3N",
+    "descripcion": "",
+    "precio": 37.9,
+    "origen": "Suecia",
+    "cantidad": "2.00 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-vodka-absolut-level-botellon/",
+    "urlImagen": "https://i1.wp.com/marianomadrueno.es/wp-content/uploads/cm/absolut-level-vodka-suecia7.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 71,
+  "fields": {
+    "codigoReferencia": "1309",
+    "titulo": "ABUELO 7 A\u00d1OS",
+    "descripcion": "\nRon Abuelo 7 A\u00f1os es el resultado de la pasi\u00f3n por producir el mejor ron a\u00f1ejo. Elaborado de la fermentaci\u00f3n de mieles de ca\u00f1a, se envejece por 7 a\u00f1os en peque\u00f1os barriles de roble blanco, cuidadosamente seleccionados para este producto. Elaborado por la familia Varela.\nBajo el calor tropical y la estricta supervisi\u00f3n del maestro ronero, desarolla a trav\u00e9s de los a\u00f1os un refinado aroma y un exquisito sabor.\nIr a la web de Ron Abuelo\nSi tiene alguna duda de c\u00f3mo comprar Abuelo 7 a\u00f1os p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 18.95,
+    "origen": "Panama",
+    "cantidad": "1.40 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-abuelo-7-anos/",
+    "urlImagen": "https://i2.wp.com/marianomadrueno.es/wp-content/uploads/2013/06/abuelo-ron-siete-anos.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.licor",
+  "pk": 72,
+  "fields": {
+    "codigoReferencia": "53",
+    "titulo": "AFILADOR HIERBAS LITRO",
+    "descripcion": "\nEl Afilador Hierbas litro se elabora por la tercera generaci\u00f3n de una familia gallega que se dedica a la producci\u00f3n de licores tradicionales de su tierra de origen. Actualmente, es un cl\u00e1sico debido a su compromiso con la calidad de las materias primas, seleccionadas con 6 tipos de hierbas naturales distintas para obtener el mejor equilibrio y aroma, cuidado tradicional que realiza a conciencia su empresa durante la elaboraci\u00f3n de sus licores.\nGraduaci\u00f3n: 30\u00ba\nSi tiene alguna duda de c\u00f3mo comprar El Afilador Hierbas litro p\u00f3ngase en contacto con el personal de atenci\u00f3n al cliente.",
+    "precio": 9.95,
+    "origen": "Galicia",
+    "cantidad": "1.70 kg",
+    "graduacion": null,
+    "urlProducto": "https://marianomadrueno.es/producto/comprar-afilador-hierbas-litro/",
+    "urlImagen": "https://i0.wp.com/marianomadrueno.es/wp-content/uploads/cm/el-afilador-licor-de-hierbas3.png?fit=305%2C510&ssl=1",
+    "enStock": true
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 1,
+  "fields": {
+    "nombre": " AGUARDIENTE ",
+    "licor": [
+      1,
+      10,
+      11
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 2,
+  "fields": {
+    "nombre": " ABSENTA ",
+    "licor": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 3,
+  "fields": {
+    "nombre": "OTROS LICORES",
+    "licor": [
+      12
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 4,
+  "fields": {
+    "nombre": "OLOROSO",
+    "licor": [
+      13
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 5,
+  "fields": {
+    "nombre": "WHISKY",
+    "licor": [
+      14,
+      26,
+      49,
+      65,
+      66,
+      67
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 6,
+  "fields": {
+    "nombre": "AMONTILLADO",
+    "licor": [
+      15
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 7,
+  "fields": {
+    "nombre": "COSECHA",
+    "licor": [
+      16
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 8,
+  "fields": {
+    "nombre": "RIOJA",
+    "licor": [
+      17,
+      23
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 9,
+  "fields": {
+    "nombre": "GINEBRA",
+    "licor": [
+      18,
+      19,
+      20,
+      21,
+      47,
+      59
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 10,
+  "fields": {
+    "nombre": "CRIANZA",
+    "licor": [
+      22,
+      24
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 11,
+  "fields": {
+    "nombre": "CAVAS",
+    "licor": [
+      25
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 12,
+  "fields": {
+    "nombre": "ABSENTA",
+    "licor": [
+      27,
+      28,
+      29,
+      30,
+      31,
+      57
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 13,
+  "fields": {
+    "nombre": "VODKA",
+    "licor": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      69,
+      70
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 14,
+  "fields": {
+    "nombre": "LICORES",
+    "licor": [
+      44,
+      45
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 15,
+  "fields": {
+    "nombre": "ORUJO",
+    "licor": [
+      46
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 16,
+  "fields": {
+    "nombre": "Vinos blancos",
+    "licor": [
+      48
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 17,
+  "fields": {
+    "nombre": "DESTILADOS",
+    "licor": [
+      49,
+      53,
+      57,
+      59,
+      65,
+      66,
+      67,
+      69,
+      70,
+      71,
+      72
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 18,
+  "fields": {
+    "nombre": "VINOS",
+    "licor": [
+      50,
+      55,
+      58,
+      60,
+      61,
+      62,
+      64,
+      68
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 19,
+  "fields": {
+    "nombre": "ALTA EXPRESION",
+    "licor": [
+      50,
+      51,
+      54,
+      56,
+      64,
+      68
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 20,
+  "fields": {
+    "nombre": "REBAJAS ENERO",
+    "licor": [
+      52
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 21,
+  "fields": {
+    "nombre": "CAVAS/CHAMPANES",
+    "licor": [
+      52
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 22,
+  "fields": {
+    "nombre": "TEQUILA",
+    "licor": [
+      53
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 23,
+  "fields": {
+    "nombre": "TINTOS Y ROBLES",
+    "licor": [
+      55,
+      61
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 24,
+  "fields": {
+    "nombre": "RESERVAS",
+    "licor": [
+      58,
+      62
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 25,
+  "fields": {
+    "nombre": "CRIANZAS",
+    "licor": [
+      60,
+      63
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 26,
+  "fields": {
+    "nombre": "RON",
+    "licor": [
+      71
+    ]
+  }
+},
+{
+  "model": "licor.categoria",
+  "pk": 27,
+  "fields": {
+    "nombre": "AGUARDIENTE/PACHAR\u00c1N",
+    "licor": [
+      72
+    ]
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add categoria",
+    "content_type": 7,
+    "codename": "add_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change categoria",
+    "content_type": 7,
+    "codename": "change_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete categoria",
+    "content_type": 7,
+    "codename": "delete_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can add licor",
+    "content_type": 8,
+    "codename": "add_licor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can change licor",
+    "content_type": 8,
+    "codename": "change_licor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can delete licor",
+    "content_type": 8,
+    "codename": "delete_licor"
+  }
+}
+]
