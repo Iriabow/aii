@@ -3,6 +3,7 @@ from cgi import maxlen
 from unittest.util import _MAX_LENGTH
 
 # Create your models here.
+
 class Licor(models.Model):
     id = models.AutoField(primary_key=True)
     codigoReferencia = models.TextField(blank=True,null=True)
@@ -15,9 +16,8 @@ class Licor(models.Model):
     urlProducto = models.URLField(unique=True)
     urlImagen = models.URLField(blank=True,null=True)
     enStock = models.BooleanField()
-    #puntuacionUsuario
-    #media = 
-    #comentariosUsuario
+    
+   
 class Categoria(models.Model):
     nombre = models.TextField(unique=True)
     licor = models.ManyToManyField(Licor, blank=True)

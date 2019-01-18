@@ -21,14 +21,15 @@ def extraer_texto_casalicores():
         os.mkdir(dirindex)
     
     #nPaginas = numero_paginas('http://lacasadeloslicores.es/tienda/')
-    nPaginas = 1
+    nPaginas = 20
     licores_casalicores=[]
-    for i in range(1,nPaginas +1):#paginas+1):
+    file = open("licoreslog.txt", "w",encoding="utf-8")
+    
+    for i in range(1,10):#paginas+1):
         soup=BeautifulSoup(abrir_url('http://lacasadeloslicores.es/tienda/page/'+str(i)+"/"),'html.parser')
         
         for enlace in soup.find_all('div',class_='archive-products')[0].find_all('li'):
             
-       
             urlImagen = enlace.find(class_= "inner").img['src']
             url = enlace.find(class_="product-image").a['href']
             
@@ -37,7 +38,10 @@ def extraer_texto_casalicores():
             producto = soup2.find(itemtype = 'http://schema.org/Product')
             
             titulo = producto.find(itemprop='name').text
-
+            
+            
+            file.write(titulo+ "-Casa Licores-Pagina: " + str(i) + "\n")
+            
             descripcionEntera = producto.find(class_="resp-tabs-container")
             
             descripcion = descripcionEntera.text.split("Reseñas")[0].strip()
@@ -72,7 +76,7 @@ def extraer_texto_casalicores():
                 volumen = producto.find(class_="goog-text-highlight")[0].text
                 
             except:
-                volumen = "Sin determinar"
+                volumen = None
             
             try:
                 graduacion = float(producto.find(class_="goog-text-highlight")[1].text.replace("º",""))
@@ -87,6 +91,7 @@ def extraer_texto_casalicores():
             print(diccionarioLicor)
             licores_casalicores.append(diccionarioLicor)
             time.sleep(1)
+    file.close()
     return licores_casalicores
     
     

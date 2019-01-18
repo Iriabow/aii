@@ -7,6 +7,7 @@ from licor.scraping_marianomadrueno import extraer_licores
 
 
 def save_all_licores():
+
     licores = extraer_texto_casalicores()
     for licDicc in (licores):
         print(licDicc)

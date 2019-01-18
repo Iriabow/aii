@@ -22,13 +22,15 @@ def extraer_texto_disevil():
         os.mkdir(dirindex)
     #nPaginas = numero_paginas('https://www.disevil.com/tienda/es/80-licores-y-destilados/')
     nPaginas = 1
-    categorias = [' AGUARDIENTE ',' ABSENTA ',' BRANDY ',' COGNAC ',' ARMAGNAC ',' WHYSKY ',' BOURBON ',' GINEBRA ',' RON ',' VODKA ',' TEQUILA']
+    categorias = ['AGUARDIENTE','ABSENTA','BRANDY','COGNAC','ARMAGNAC','WHYSKY','BOURBON','GINEBRA','RON','VODKA','TEQUILA']
     licores_disevil=[]
-    for i in range(1,nPaginas+1):#paginas+1):
+    file = open("licoreslog.txt", "a",encoding="utf-8")
+    for i in range(1,10):#paginas+1):
         soup=BeautifulSoup(abrir_url('https://www.disevil.com/tienda/es/80-licores-y-destilados/?p='+str(i)+"/"),'html.parser')
         
+        
         for enlace in soup.find_all(class_='quick-view'):
-            tupla = []
+    
             url = enlace['href']
 
             soup2 = BeautifulSoup(abrir_url(url),'html.parser')
@@ -36,6 +38,9 @@ def extraer_texto_disevil():
             producto = soup2.find(itemtype="http://schema.org/Product")
             
             titulo = " " + producto.find(itemprop="name").text + " "
+            
+            
+            file.write(titulo+ "-Disevil-Pagina: " + str(i) + "\n")
             
             descripcion1 = producto.find(itemprop="description")
             if(descripcion1 !=None):
@@ -64,8 +69,8 @@ def extraer_texto_disevil():
                     categoria=cat
                     break
             if(categoria== None):
-                if ' GIN ' in titulo:
-                    categoria = ' GINEBRA '
+                if 'GIN' in titulo:
+                    categoria = 'GINEBRA'
                 else:
                     categoria='OTROS LICORES'        
             categoria=[categoria]
@@ -87,7 +92,7 @@ def extraer_texto_disevil():
                     volumen = "70CL"
                     
             else:
-                volumen = "70CL"
+                volumen = None
             volumen = volumen.replace(" ","")
             volumen = volumen.replace("070","70")
             
@@ -121,18 +126,20 @@ def extraer_texto_disevil():
                 origen = origen.replace(":","")
             
             if origen == "":
-                origen = "Sin determinar"
+                origen = None
             
             origen = origen.replace(" ","")
             origen = origen.replace(".","")
             if len(origen) > 30:
-                origen ="Sin determinar"
+                origen = None
         
             descripcion = descripcion1 + descripcion2
             diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":origen,"categoria":categoria,"cantidad":volumen,"graduacion":graduacion,"urlProducto":url,"enStock":enStock,"urlImagen":urlImagen}
             print(diccionarioLicor)
             licores_disevil.append(diccionarioLicor)
             time.sleep(1)
+    file.close()
+            
     return licores_disevil
     
     

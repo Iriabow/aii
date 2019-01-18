@@ -17,7 +17,8 @@ def extraer_licores():
     #nPaginas=numero_paginas()
     nPaginas = 1
     licores_marianomadrueno=[]
-    for i in range(1,nPaginas+1):
+    file = open("licoreslog.txt", "a",encoding="utf-8")
+    for i in range(1,10):
         
         soup=BeautifulSoup(abrir_url( 'https://marianomadrueno.es/tienda/page/'+str(i) ),'html.parser')
         
@@ -29,24 +30,30 @@ def extraer_licores():
             
             
             titulo = licorSoup.find_all('h1',class_='product_title entry-title')[0].text
+            
+            file.write(titulo+ "-Mariano Madrueno-Pagina: " + str(i) + "\n")
+            
             precio = float(licorSoup.find_all('p',class_='price')[0].span.text.split('€')[0].replace(',','.'))
             referencia = None
-            origen= "Desconocido"
+            origen= None
             meta=licorSoup.find_all('div',class_='product_meta')[0].text.split(':')
             palabraAnterior=""
-            categoria=[]
-            
+            categoriaArray=[]
+            categoria = "OTROS LICORES"
             for palabra in meta:
                 if("Referencia" in palabraAnterior):
                     referencia = palabra.strip()
                 if("Procedencia" in palabraAnterior):
                     origen = palabra.strip().replace('Referencia','')
                 if("Categoría" in palabraAnterior):
-                    categoria=palabra.upper().split('\n')[0].split(',')
-                    for index in range(0,len(categoria)):
-                        categoria[index] = categoria[index].strip()
+                    categoriaArray=palabra.upper().split('\n')[0].split(',')
+                    for index in range(0,len(categoriaArray)):
+                        categoriaArray[index] = categoriaArray[index].strip()
                 palabraAnterior = palabra
-            
+            if len(categoriaArray) == 0:
+                categoriaArray.append(categoria)
+                
+                
             urlImagen = licorSoup.find_all('img',class_='wp-post-image')[0]['src']
             
             descripcionArray = licorSoup.find_all('div',class_='woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab')
@@ -76,13 +83,15 @@ def extraer_licores():
                 
             if (stock<=0):
                 enStock=False
-            
-            peso = licorSoup.find_all('td',class_='product_weight')[0].text.strip()
-            
-            diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":origen,"categoria":categoria,"cantidad":peso,"graduacion":graduacion,"urlProducto":licorUrl,"enStock":enStock,"urlImagen":urlImagen}
+            try:
+                peso = licorSoup.find_all('td',class_='product_weight')[0].text.strip()
+            except:
+                peso = None
+            diccionarioLicor = {"codigoReferencia":referencia,"titulo":titulo,"descripcion":descripcion,"precio":precio,"origen":origen,"categoria":categoriaArray,"cantidad":peso,"graduacion":graduacion,"urlProducto":licorUrl,"enStock":enStock,"urlImagen":urlImagen}
             print(diccionarioLicor)
             licores_marianomadrueno.append(diccionarioLicor)
             time.sleep(1)
+    file.close()
     return licores_marianomadrueno
         
         
