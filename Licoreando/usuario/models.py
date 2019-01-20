@@ -17,18 +17,20 @@ class Formulario(models.Model):
     comentario = models.TextField(blank = True, null = True)
     precioMinimo = models.FloatField(blank = True, null = True)
     precioMaximo = models.FloatField(blank = True, null = True)
+    graduacionMinima = models.FloatField(blank = True, null = True)
+    graduacionMaxima = models.FloatField(blank = True, null = True)
     
-class PuntuacionLicorFormulario(models.Model):
+class PuntuacionCategoriaLicor(models.Model):
     licor = models.TextField()
     puntuacion = models.IntegerField(validators= [MinValueValidator(0), MaxValueValidator(10)])
     formulario = models.ForeignKey(Formulario,blank = False, null = False, on_delete = models.CASCADE)
     
-class PuntuacionesOrigenLicor(models.Model):
+class PuntuacionOrigenLicor(models.Model):
     origen = models.TextField()
     puntuacion = models.IntegerField(validators= [MinValueValidator(0), MaxValueValidator(10)])
     formulario = models.ForeignKey(Formulario,blank = False, null = False, on_delete = models.CASCADE)
 
-class PuntuacionesMarcaLicor(models.Model):
+class PuntuacionMarcaLicor(models.Model):
     marca =models.TextField()
     puntuacion = models.IntegerField(validators= [MinValueValidator(0), MaxValueValidator(10)])
     formulario = models.ForeignKey(Formulario,blank = False, null = False, on_delete = models.CASCADE)
