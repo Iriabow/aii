@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-from django.conf.global_settings import AUTH_USER_MODEL
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -73,8 +72,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Licoreando.wsgi.application'
 
-AUTH_USER_MODEL = 'usuario.Usuario'
+AUTH_USER_MODEL = 'auth.User'
 
+AUTHENTICATION_BACKENDS = ['django.contrib.auth.backends.ModelBackend']
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -103,12 +103,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
 TIME_ZONE = 'UTC'
 

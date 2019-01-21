@@ -13,9 +13,23 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+#encoding:utf-8
 from django.contrib import admin
 from django.urls import path
 
+from licor import views as lview
+from usuario import views as uview
+
 urlpatterns = [
+    path('', lview.index),
     path('admin/', admin.site.urls),
+    path('licor/search', lview.buscarLicor),
+    path('user/register', uview.registro),
+    path('user/login', uview.loginUsuario),
+    path('user/logout', uview.logoutUsuario),
+    path('user/forms', uview.formularioPreferencias),
+    path('licor/recomendation', lview.recomendacion)
 ]
+
+
+

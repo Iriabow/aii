@@ -16,7 +16,6 @@ class Licor(models.Model):
     urlProducto = models.URLField(unique=True)
     urlImagen = models.URLField(blank=True,null=True)
     enStock = models.BooleanField()
-    
    
 class Categoria(models.Model):
     nombre = models.TextField(unique=True)
