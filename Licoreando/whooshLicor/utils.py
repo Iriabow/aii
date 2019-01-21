@@ -1,11 +1,7 @@
-'''
-~
-'''
-import time
-from whoosh import sorting, qparser
+from whoosh import sorting
 from whoosh import index
 from whoosh.qparser import QueryParser
-from whoosh.query import Regex,And,Or,Not,FuzzyTerm,Term
+from whoosh.query import FuzzyTerm
 from whoosh.sorting import MultiFacet
 #Range facets
 #facet= getPrecioFacet()
