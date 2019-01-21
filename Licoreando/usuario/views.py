@@ -3,8 +3,9 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
-from usuario.forms import Registro, Login, FormularioP
-from usuario.models import Formulario
+from usuario.forms import Registro, Login, FormularioPreferencias
+from usuario.models import Formulario, PuntuacionCategoriaLicor, \
+    PuntuacionOrigenLicor, PuntuacionMarcaLicor
 
 
 def registro(request):
@@ -18,6 +19,7 @@ def registro(request):
             email = form.cleaned_data['Email']
             passw = form.cleaned_data['Contraseña1']
             user = User.objects.create_user(username=username,password=passw,email=email,first_name=name,last_name=last_name)
+            formulario = Formulario.objects.create(comentario="",precioMinimo="",precioMaximo="",graduacionMinima="",graduacionMaxima="",usuario=user)
             return redirect('/user/login')
         return render(request,'register.html', {'form':form})
     return render(request,'register.html', {'form':form})
@@ -44,9 +46,9 @@ def loginUsuario(request):
     return render(request,'login.html', {'form':form})
 
 def formularioPreferencias(request):
-    form = FormularioP()
+    form = FormularioPreferencias()
     if request.method=='POST':
-        form = FormularioP(request.POST)
+        form = FormularioPreferencias(request.POST)
         if form.is_valid():
             comentario = form.cleaned_data['comentario']
             precioMinimo = form.cleaned_data['precioMinimo']
@@ -54,8 +56,51 @@ def formularioPreferencias(request):
             graduacionMinima = form.cleaned_data['graduacionMinima']
             graduacionMaxima = form.cleaned_data['graduacionMinima']
             user = request.user
-            formulario = Formulario.objects.create(comentario=comentario,precioMinimo=precioMinimo,precioMaximo=precioMaximo,graduacionMinima=graduacionMinima,graduacionMaxima=graduacionMaxima,usuario=user)
+            formulario = Formulario.objects.get(ususario=user)
+            formulario = Formulario.objects.create(id = formulario.id,  comentario=comentario,precioMinimo=precioMinimo,precioMaximo=precioMaximo,graduacionMinima=graduacionMinima,graduacionMaxima=graduacionMaxima,usuario=user)
             return render(request,'index.html')
+        return render(request,'forms.html', {'form':form})
+    return render(request,'forms.html', {'form':form})
+
+def formularioLicor(request):
+    form = formularioLicor()
+    if request.method=='POST':
+        form = formularioLicor(request.POST)
+        if form.is_valid():
+            user = request.user
+            formulario = Formulario.objects.get(ususario=user)
+            licor = form.cleaned_data['licor']
+            puntuacion = form.cleaned_data['puntuacion']
+            puntuacionCategoriaLicor =PuntuacionCategoriaLicor.objects.create(formulario=formulario,puntuacion=puntuacion,licor=licor)
+            return render(request,'forms.html')
+        return render(request,'forms.html', {'form':form})
+    return render(request,'forms.html', {'form':form})
+
+def formularioOrigen(request):
+    form = formularioLicor()
+    if request.method=='POST':
+        form = formularioLicor(request.POST)
+        if form.is_valid():
+            user = request.user
+            formulario = Formulario.objects.get(ususario=user)
+            origen = form.cleaned_data['origen']
+            puntuacion = form.cleaned_data['puntuacion']
+            puntuacionOrigenLicor =PuntuacionOrigenLicor.objects.create(formulario=formulario,puntuacion=puntuacion,origen=origen)
+            return render(request,'forms.html')
+        return render(request,'forms.html', {'form':form})
+    return render(request,'forms.html', {'form':form})
+
+def formularioMarca(request):
+    form = formularioLicor()
+    if request.method=='POST':
+        form = formularioLicor(request.POST)
+        if form.is_valid():
+            user = request.user
+            formulario = Formulario.objects.get(ususario=user)
+            marca =form.cleaned_data['marca']
+            puntuacion = form.cleaned_data['puntuacion'] 
+            puntuacionMarcaLicor = PuntuacionMarcaLicor.objects.create(formulario=formulario,puntuacion=puntuacion,marca=marca)
+            return render(request,'forms.html')
         return render(request,'forms.html', {'form':form})
     return render(request,'forms.html', {'form':form})
 

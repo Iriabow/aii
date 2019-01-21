@@ -49,10 +49,21 @@ class Login(forms.Form):
             raise forms.ValidationError(_("Esta cuenta no existe"),
                 code='not_existent_account')
             
-class FormularioP(forms.Form):
-    precioMinimo = forms.FloatField()
-    precioMaximo = forms.FloatField()
-    graduacionMinima = forms.FloatField()
-    graduacionMaxima = forms.FloatField()
-    comentario = forms.CharField(widget=forms.Textarea)
-            
+class FormularioPreferencias(forms.Form):
+    precioMinimo = forms.FloatField(required=False, label="Precio Mínimo")
+    precioMaximo = forms.FloatField(required=False,label="Precio Máximo")
+    graduacionMinima = forms.FloatField(required=False,label="Graduación Mínima")
+    graduacionMaxima = forms.FloatField(required=False,label="Graduación Máxima")
+    comentario = forms.CharField(widget=forms.Textarea,required=False)
+
+class FormularioLicor(forms.Form):
+    licor = forms.CharField()
+    puntuacion = forms.IntegerField(min_value=0, max_value=10)
+    
+class FormularioOrigen(forms.Form):
+    origen = forms.CharField()
+    puntuacion = forms.IntegerField(min_value=0, max_value=10)
+
+class FormularioMarca(forms.Form):
+    marca =forms.CharField()
+    puntuacion = forms.IntegerField(min_value=0, max_value=10)

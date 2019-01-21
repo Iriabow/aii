@@ -12,7 +12,7 @@
 <p><input type='submit' value='Buscar'/></p>
 </form>
 
-<table style="width:50%">
+<table style="width:50%" align="center" >
   <tr>
     <th>Título</th>
 	<th>Imagen</th>
@@ -31,8 +31,11 @@
     <td>{{licor.titulo}}</td>
     <td><img src="{{licor.urlImagen}}" width="100px"/></td> 
     <td>{{licor.codigoReferencia}}</td> 
-    <td>{{licor.descripcion}}</td>
-    <td>{{licor.precio}}</td>
+    <td><div class="tooltip">
+    {%if not licor.descripcion == "" %}
+        <a class="description">Descripción</a><span class="tooltiptext">{{licor.descripcion}}</span></div></td>
+    {%endif%}
+    <td>{{licor.precio}}€</td>
     <td>{{licor.origen}}</td> 
     <td>{{licor.cantidad}}</td>
     <td>{{licor.graduacion}}</td>
@@ -50,7 +53,7 @@
     {% if licor.enStock == False %}
     	<td>Sin stock</td>
     {%endif%}
-  </tr>
+ </tr>
 {% endfor %}
 </table>
 </body>
