@@ -1,8 +1,4 @@
 from django.db import models
-from cgi import maxlen
-from unittest.util import _MAX_LENGTH
-
-# Create your models here.
 
 class Licor(models.Model):
     id = models.AutoField(primary_key=True)

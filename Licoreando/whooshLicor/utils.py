@@ -1,19 +1,21 @@
-'''
-~
-'''
-from whoosh import sorting, qparser
+from whoosh import sorting
 from whoosh import index
 from whoosh.qparser import QueryParser
-from whoosh.query import Regex,And,Or,Not,FuzzyTerm,Term
+from whoosh.query import FuzzyTerm
+from whoosh.sorting import MultiFacet
 #Range facets
 #facet= getPrecioFacet()
 #results = searcher.search(myquery, groupedby=facet)
 #results.groups(), devuelve un diccionario con los grupos.
-def getPrecioFacet():
-    return sorting.RangeFacet("precio", 0, 10000, [10, 40, 50, 100]) # 0-10€, 10-50€, 50-100€ y ya de 100 en 100.
+def getPrecioFacet(rango):
+    inferior=rango[0]
+    superior=rango[1]-inferior
+    return sorting.RangeFacet("precio", 0, 10000, [inferior,superior]) # 0-10€, 10-50€, 50-100€ y ya de 100 en 100.
 
-def getGraduaciónFacet():
-    return sorting.RangeFacet("graduación", 0, 100, [5, 10],hardend=True)
+def getGraduacionFacet(rango):
+    inferior=rango[0]
+    superior=rango[1]-inferior
+    return sorting.RangeFacet("graduacion", 0, 100, [inferior, superior],hardend=True)
 
 
 def faceta_enStock():
@@ -24,10 +26,27 @@ def faceta_categoria():
     faceta_categoria = sorting.FieldFacet('categoria')
     return faceta_categoria
 
-def ordenarLista(orderDic):
     
+def agruparLista(groupDic):
     
-def listarPorAtributo(busqueda="",categoria=None, orderDic):
+    grupo={}
+    keys = groupDic.keys()
+    if not(groupDic):
+        return None
+    else:
+        if 'precio' in keys and 'graduacion' in keys:
+            precioFacet=getPrecioFacet(groupDic["precio"])
+            graduacionFacet=getGraduacionFacet(groupDic["graduacion"])
+            multifaceta = MultiFacet([precioFacet,graduacionFacet])
+            grupo= {"precio/graduacion":multifaceta}
+        elif 'precio' not in keys and 'graduacion' in keys:
+            grupo= {'graduacion': getGraduacionFacet(groupDic["graduacion"])}
+        elif 'precio' in keys and 'graduacion' not in keys:
+            grupo= {'precio':getPrecioFacet(groupDic["precio"])}
+        
+    return grupo
+        
+def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElementosPagina=20, pagina=1):
     
     ix=index.open_dir("licoresIndex")
     busqueda = busqueda.strip()
@@ -43,21 +62,38 @@ def listarPorAtributo(busqueda="",categoria=None, orderDic):
             query = querySearchGenerator(busqueda) & queryCategoryGenerator(categoria)
         
         query.normalize()
-        scores = sorting.ScoreFacet()
-        results = searcher.search(query,sortedby=[faceta_enStock(), scores],limit = 3000)
-        print(results)
-        for r in results:
-            print(r)
+        if not order:
+            order = sorting.ScoreFacet()
+        groupMap= agruparLista(groupDic)
+        results = searcher.search(query,groupedby = groupMap,sortedby=[faceta_enStock(),order],limit = 4000)
+        grupo = range(0,searcher.doc_count())
+        if(groupMap):
+            try:
+                if "precio/graduacion" in groupMap.keys():
+                    tuplaKey=(groupDic["precio"],groupDic["graduacion"])
+                elif("precio" in groupMap.keys()):
+                    tuplaKey=groupDic["precio"]
+                else:
+                    tuplaKey=groupDic["graduacion"]
+                    
+                grupo=results.groups(next(iter(groupMap)))[tuplaKey]
+            except:
+                grupo=[]
+    
+        lista = []
+        for documentIndex in grupo[(pagina-1)*nElementosPagina:pagina*nElementosPagina]:
+            elemento = searcher.stored_fields(documentIndex)
+            lista.append(elemento)
+        return (lista,len(grupo))
         
 def querySearchGenerator(busqueda):
     trozos = busqueda.split(" ")
     query = None
     for p in trozos:
         if(query is None):
-            query = FuzzyTerm("titulo",p,maxdist=int(p/4)) | FuzzyTerm("descripcion",p,maxdist=int(p/4))
+            query = FuzzyTerm("titulo",p,maxdist=int(len(p)/4)) | FuzzyTerm("descripcion",p,maxdist=int(len(p)/4))
         else:
-            query = query | FuzzyTerm("titulo",p,maxdist=int(p/4)) | FuzzyTerm("descripcion",p,maxdist=int(p/4))
-    print(query)
+            query = query | FuzzyTerm("titulo",p,maxdist=int(len(p)/4)) | FuzzyTerm("descripcion",p,maxdist=int(len(p)/4))
     return query
 
 def queryCategoryGenerator(busqueda):
@@ -65,47 +101,11 @@ def queryCategoryGenerator(busqueda):
     query = None
     for p in trozos:
         if(query is None):
-            query = FuzzyTerm("categoria",p,maxdist=int(p/4))
+            query = FuzzyTerm("categoria",p,maxdist=0)
         else:
-            query = query | FuzzyTerm("categoria",p,maxdist=int(p/4))
+            query = query | FuzzyTerm("categoria",p,maxdist=0)
     
     return query
-listarPorAtributo()
+
+print(listarPorAtributo(busqueda = "beefeater vodka",groupDic={"precio":(0,1000),"graduacion":(0,100)},nElementosPagina=20,pagina=1))
                 
-#Ordenar/agrupar con varias "facetas", las facetas se usan para ordenar y agrupar.
-"""
-
-MultiFacet
-
-This facet type returns a composite of the keys returned by two or more sub-facets, allowing you to sort/group by the intersected values of multiple facets.
-
-MultiFacet has methods for adding facets:
-
-myfacet = sorting.RangeFacet(0, 1000, 10)
-
-mf = sorting.MultiFacet()
-mf.add_field("category")
-mf.add_field("price", reverse=True)
-mf.add_facet(myfacet)
-mf.add_score()
-
-You can also pass a list of field names and/or FacetType objects to the initializer:
-
-prices = sorting.FieldFacet("price", reverse=True)
-scores = sorting.ScoreFacet()
-mf = sorting.MultiFacet(["category", prices, myfacet, scores])
-"""
-#Comparando dos formas de hacer las cosas:
-"""
-
-mf = sorting.MultiFacet()
-mf.add_field("size")
-mf.add_field("price", reverse=True)
-results = searcher.search(myquery, sortedby=mf)
-
-# or...
-sizes = sorting.FieldFacet("size")
-prices = sorting.FieldFacet("price", reverse=True)
-results = searcher.search(myquery, sortedby=[sizes, prices])
-
-"""
