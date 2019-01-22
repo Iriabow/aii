@@ -1,10 +1,11 @@
-from whoosh import index
+from _decimal import Decimal
 import os
-from whooshLicor.schemas import crear_esquema
 import django
-from django.core.paginator import Paginator
 django.setup()
+from django.core.paginator import Paginator
+from whoosh import index
 from licor.models import Licor
+from whooshLicor.schemas import crear_esquema
 
 def indexar():
     if not os.path.exists("licoresIndex"):
@@ -29,8 +30,11 @@ def indexar():
             d = licor.descripcion
             if not(licor.precio):
                 p=None
+                pGroup = None
             else:
                 p = licor.precio
+                pGroup = p 
+                p=Decimal(str(p))
             o = licor.origen
             if not(licor.graduacion):
                 grad = None
@@ -40,7 +44,7 @@ def indexar():
             url = licor.urlProducto
             cat = array_toString(list(licor.categoria_set.all()))
             print(cat)
-            writer.add_document(id= i, categoria = cat,titulo = t,descripcion = d,precio = p, 
+            writer.add_document(id= i, categoria = cat,titulo = t,descripcion = d,precio = p, precioGroup= pGroup,
                                 origen = o,graduacion = grad, enStock= es,urlProducto=url)
        
         licores = paginator.page(licores.next_page_number())

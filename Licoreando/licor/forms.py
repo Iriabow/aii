@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
 from django import forms
 from django.core.exceptions import ObjectDoesNotExist
+from django.template.defaultfilters import default
 
 from licor.models import Categoria
-from django.template.defaultfilters import default
 
 
 class SearchForm(forms.Form):

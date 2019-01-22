@@ -1,4 +1,5 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render
+from django.template.defaultfilters import lower
 
 from licor.forms import SearchForm
 from licor.models import Licor, Categoria
@@ -19,16 +20,19 @@ def buscarLicor(request):
             graduacionMaxima = form.cleaned_data["graduacionMaxima"]
             precioMinimo = form.cleaned_data["precioMinimo"]
             precioMaximo = form.cleaned_data["precioMaximo"]
-            print(busqueda,"+",graduacionMinima,"+",graduacionMaxima,"+",precioMinimo,"+",precioMaximo)
-#             ordenarSimilitud = form.cleaned_data["ordenarSimilitud"]
-#             ordenarPrecio = form.cleaned_data["ordenarPrecio"]
-#             ordenarTitulo = form.cleaned_data["ordenarTitulo"]
-#             ordenarGraduacion = form.cleaned_data["ordenarGraduacion"]
-#             ordenarProcedencia = form.cleaned_data["ordenarProcedencia"]
-#            categoria = form.cleaned_data["Categoría"]           
-#            licoresId = listarPorAtributo(busqueda=busqueda,categoria=[], order ="",groupDic={}, nElementosPagina=20, pagina=1)
-#            licores = getLicores(licoresId)
-            licores = []
+            groupDic={}
+            if precioMinimo and precioMaximo:
+                groupDic["precio"]=(precioMinimo,precioMaximo)
+            if graduacionMinima and graduacionMaxima:
+                groupDic["graduacion"]=(graduacionMinima,graduacionMaxima)
+            orden = request.POST["order"]
+            categoriaP = request.POST.getlist("categoria")
+            categoria = []
+            for cat in categoriaP:
+                categoria.append((Categoria.objects.get(id=cat)).nombre.lower())
+            busqueda = lower(busqueda)       
+            licoresId = listarPorAtributo(busqueda=busqueda,categoria=categoria, order =orden,groupDic=groupDic, nElementosPagina=20, pagina=1)
+            licores = getLicores(licoresId)
             return render(request,'search_licor.html', {'licores':licores,'form':form ,'categorias': categorias})
     licoresId = listarPorAtributo()
     licores = getLicores(licoresId)
@@ -85,5 +89,5 @@ def recomendarLicor(request):
 def getLicores(licoresId):
     licores = []
     for licor in licoresId[0]:
-        licores.append(Licor.objects.get(id=licor['id'])) 
+        licores.append(Licor.objects.get(id=licor)) 
     return licores

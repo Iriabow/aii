@@ -11,7 +11,7 @@ import time
 def getPrecioFacet(rango):
     inferior=rango[0]
     superior=rango[1]-inferior
-    return sorting.RangeFacet("precio", 0, 10000, [inferior,superior]) # 0-10€, 10-50€, 50-100€ y ya de 100 en 100.
+    return sorting.RangeFacet("precioGroup", 0, 10000, [inferior,superior]) # 0-10€, 10-50€, 50-100€ y ya de 100 en 100.
 
 def getGraduacionFacet(rango):
     inferior=rango[0]
@@ -29,7 +29,7 @@ def faceta_categoria():
 
     
 def agruparLista(groupDic):
-    
+
     grupo={}
     keys = groupDic.keys()
     if not(groupDic):
@@ -44,12 +44,11 @@ def agruparLista(groupDic):
             grupo= {'graduacion': getGraduacionFacet(groupDic["graduacion"])}
         elif 'precio' in keys and 'graduacion' not in keys:
             grupo= {'precio':getPrecioFacet(groupDic["precio"])}
-        
     return grupo
         
 def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElementosPagina=20, pagina=1):
-    
-    ix=index.open_dir("licoresIndex")
+    tam=0
+    ix=index.open_dir("whooshLicor/licoresIndex")
     lista = []
     busqueda = busqueda.strip()
     with ix.searcher() as searcher:
@@ -69,6 +68,7 @@ def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElemento
         groupMap= agruparLista(groupDic)
         results = searcher.search(query,groupedby = groupMap,sortedby=[faceta_enStock(),order],limit = 4000)
         grupo = range(0,searcher.doc_count())
+        tam=len(results)
         if(groupMap):
             try:
                 if "precio/graduacion" in groupMap.keys():
@@ -84,12 +84,12 @@ def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElemento
     
             for documentIndex in grupo[(pagina-1)*nElementosPagina:pagina*nElementosPagina]:
                 elemento = searcher.stored_fields(documentIndex)
-                lista.append(elemento)
+                lista.append(elemento['id'])
+            tam=len(grupo)
         elif not(groupDic):
             for r in results[(pagina-1)*nElementosPagina:pagina*nElementosPagina]:
                 lista.append(r['id'])
-                
-        return (lista,len(grupo))
+        return (lista,tam)
         
 def querySearchGenerator(busqueda):
     trozos = busqueda.split(" ")
@@ -106,11 +106,11 @@ def queryCategoryGenerator(busqueda):
     query = None
     for p in trozos:
         if(query is None):
-            query = FuzzyTerm("categoria",p,maxdist=0)
+            query = FuzzyTerm("categoria",p,maxdist=2)
         else:
-            query = query | FuzzyTerm("categoria",p,maxdist=0)
+            query = query | FuzzyTerm("categoria",p,maxdist=2)
     
     return query
 
-print(listarPorAtributo(busqueda = "ginebra"))
+#print(listarPorAtributo())
                 
