@@ -3,6 +3,7 @@ from whoosh import index
 from whoosh.qparser import QueryParser
 from whoosh.query import FuzzyTerm
 from whoosh.sorting import MultiFacet
+import time
 #Range facets
 #facet= getPrecioFacet()
 #results = searcher.search(myquery, groupedby=facet)
@@ -86,8 +87,8 @@ def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElemento
                 lista.append(elemento)
         elif not(groupDic):
             for r in results[(pagina-1)*nElementosPagina:pagina*nElementosPagina]:
-                lista.append(r)
-                print(r)
+                lista.append(r['id'])
+                
         return (lista,len(grupo))
         
 def querySearchGenerator(busqueda):
