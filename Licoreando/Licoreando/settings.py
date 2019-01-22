@@ -116,8 +116,23 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGES = (
+    ('es', _('Español')),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if 'HEROKU' in os.environ:
+    try:
+        from local_settings_heroku import *
+
+        BASEURL = 'https://'+os.environ['REPO_NAME']+'.herokuapp.com'
+
+        #Heroku (Esta configuración debe ir aquí)
+        import django_heroku
+        django_heroku.settings(locals())
+    except ImportError:
+        print("local_settings_heroku.py not found")
