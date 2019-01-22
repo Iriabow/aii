@@ -49,9 +49,9 @@ def agruparLista(groupDic):
 def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElementosPagina=20, pagina=1):
     
     ix=index.open_dir("licoresIndex")
+    lista = []
     busqueda = busqueda.strip()
     with ix.searcher() as searcher:
-    
         if(not(busqueda) and not(categoria)):
             query = QueryParser("titulo",ix.schema).parse("*")
         elif(not(busqueda) and categoria):
@@ -60,6 +60,7 @@ def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElemento
             query = querySearchGenerator(busqueda)
         elif(busqueda and categoria):
             query = querySearchGenerator(busqueda) & queryCategoryGenerator(categoria)
+        
         
         query.normalize()
         if not order:
@@ -80,10 +81,13 @@ def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElemento
             except:
                 grupo=[]
     
-        lista = []
-        for documentIndex in grupo[(pagina-1)*nElementosPagina:pagina*nElementosPagina]:
-            elemento = searcher.stored_fields(documentIndex)
-            lista.append(elemento)
+            for documentIndex in grupo[(pagina-1)*nElementosPagina:pagina*nElementosPagina]:
+                elemento = searcher.stored_fields(documentIndex)
+                lista.append(elemento)
+        elif not(groupDic):
+            for r in results[(pagina-1)*nElementosPagina:pagina*nElementosPagina]:
+                lista.append(r)
+                print(r)
         return (lista,len(grupo))
         
 def querySearchGenerator(busqueda):
@@ -107,5 +111,5 @@ def queryCategoryGenerator(busqueda):
     
     return query
 
-print(listarPorAtributo(busqueda = "beefeater vodka",groupDic={"precio":(0,1000),"graduacion":(0,100)},nElementosPagina=20,pagina=1))
+print(listarPorAtributo(busqueda = "ginebra"))
                 

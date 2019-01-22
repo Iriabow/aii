@@ -27,9 +27,15 @@ def indexar():
             i = licor.id
             t = licor.titulo.strip()
             d = licor.descripcion
-            p = licor.precio
+            if not(licor.precio):
+                p=None
+            else:
+                p = licor.precio
             o = licor.origen
-            grad = licor.graduacion
+            if not(licor.graduacion):
+                grad = None
+            else:
+                grad = licor.graduacion
             es = licor.enStock
             url = licor.urlProducto
             cat = array_toString(list(licor.categoria_set.all()))
