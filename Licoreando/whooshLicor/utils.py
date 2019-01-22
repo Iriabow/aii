@@ -112,5 +112,5 @@ def queryCategoryGenerator(busqueda):
     
     return query
 
-#print(listarPorAtributo())
+#print(listarPorAtributo(nElementosPagina=10,pagina=1))
                 
