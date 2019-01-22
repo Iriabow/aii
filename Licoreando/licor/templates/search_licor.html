@@ -7,8 +7,19 @@
 {% include 'header.html' %}
 
 <h1>Buscar licores</h1>
-<form id='form' method='get' action='search_licor.html'>
+<form id='form' method='post'>
+{% csrf_token %}
 {{form.as_p}}
+<select multiple>
+{% for cat in categorias %}
+  <option value="cat.id">{{cat.nombre}}</option>
+ {%endfor%}
+</select><br>
+<a>Ordenar tabla por:</a><br>
+<input type="radio" name="Similitud" value="male"> Similitud<br>
+<input type="radio" name="Precio" value="female"> Precio<br>
+<input type="radio" name="Título" value="other"> Título<br>
+<input type="radio" name="Graduación" value="other"> Graduación<br>
 <p><input type='submit' value='Buscar'/></p>
 </form>
 
