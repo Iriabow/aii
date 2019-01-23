@@ -5,9 +5,13 @@
 <body>
 <header>
 {% include 'header.html' %}
+<div class="titulo">
+<h3>Para obtener una lista de recomendaciones, actualice su formulario</h3>
+<h3>En caso de actualizar su formulario, puede tardar en realizar una recomendación efectiva</h3>
 {% if not licores %}
   <h3>No hay recomendaciones disponibles, intente rellenar el formulario de preferencias</h3>
 {%endif%}
+</div>
 {% if licores %}
 <table style="width:50%" align="center" >
   <tr>
