@@ -1,9 +1,12 @@
-from whoosh import sorting
+import time
+
 from whoosh import index
+from whoosh import sorting
 from whoosh.qparser import QueryParser
 from whoosh.query import FuzzyTerm
+from whoosh.query.terms import MultiTerm
 from whoosh.sorting import MultiFacet
-import time
+
 #Range facets
 #facet= getPrecioFacet()
 #results = searcher.search(myquery, groupedby=facet)
@@ -61,7 +64,6 @@ def listarPorAtributo(busqueda="",categoria=[], order ="",groupDic={}, nElemento
         elif(busqueda and categoria):
             query = querySearchGenerator(busqueda) & queryCategoryGenerator(categoria)
         
-        
         query.normalize()
         if not order:
             order = sorting.ScoreFacet()
@@ -102,14 +104,27 @@ def querySearchGenerator(busqueda):
     return query
 
 def queryCategoryGenerator(busqueda):
-    trozos = busqueda
+    trozos = []
+    
+    for b in busqueda:
+        t=[]
+    
+        if " " in b:
+            t = b.split(" ")
+            trozos = trozos + t
+        elif "/" in b:
+            t = b.split("/")
+            trozos = trozos + t
+            
+        trozos.append(b)
+    
     query = None
+    
     for p in trozos:
         if(query is None):
             query = FuzzyTerm("categoria",p,maxdist=2)
         else:
             query = query | FuzzyTerm("categoria",p,maxdist=2)
-    
     return query
 
 #print(listarPorAtributo(nElementosPagina=10,pagina=1))

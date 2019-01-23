@@ -19,13 +19,10 @@ def registro(request):
             email = form.cleaned_data['Email']
             passw = form.cleaned_data['Contraseña1']
             user = User.objects.create_user(username=username,password=passw,email=email,first_name=name,last_name=last_name)
-            formulario = Formulario.objects.create(comentario="",precioMinimo="",precioMaximo="",graduacionMinima="",graduacionMaxima="",usuario=user)
+            formulario = Formulario.objects.create(comentario=None,precioMinimo=None,precioMaximo=None,graduacionMinima=None,graduacionMaxima=None,usuario=user)
             return redirect('/user/login')
         return render(request,'register.html', {'form':form})
     return render(request,'register.html', {'form':form})
-
-def formularios(request):
-    return render(request,'index.html')
 
 def loginUsuario(request):
     form = Login()
@@ -45,8 +42,14 @@ def loginUsuario(request):
         return render(request,'login.html', {'form':form,'error':error})
     return render(request,'login.html', {'form':form})
 
-def formularioPreferencias(request):
-    form = FormularioPreferencias()
+
+def formularios(request):
+    user = request.user
+    formulario = Formulario.objects.get(usuario=user)
+    form = FormularioPreferencias(initial={'precioMinimo': formulario.precioMinimo,'precioMaximo': formulario.precioMaximo,'graduacionMinima': formulario.graduacionMinima,'graduacionMaxima': formulario.graduacionMaxima,'comentario': formulario.comentario})
+    catLicor = PuntuacionCategoriaLicor.objects.filter(formulario=formulario)
+    marcaLicor = PuntuacionMarcaLicor.objects.filter(formulario=formulario)
+    origenLicor = PuntuacionOrigenLicor.objects.filter(formulario=formulario)
     if request.method=='POST':
         form = FormularioPreferencias(request.POST)
         if form.is_valid():
@@ -54,55 +57,28 @@ def formularioPreferencias(request):
             precioMinimo = form.cleaned_data['precioMinimo']
             precioMaximo = form.cleaned_data['precioMaximo']
             graduacionMinima = form.cleaned_data['graduacionMinima']
-            graduacionMaxima = form.cleaned_data['graduacionMinima']
-            user = request.user
-            formulario = Formulario.objects.get(ususario=user)
-            formulario = Formulario.objects.create(id = formulario.id,  comentario=comentario,precioMinimo=precioMinimo,precioMaximo=precioMaximo,graduacionMinima=graduacionMinima,graduacionMaxima=graduacionMaxima,usuario=user)
-            return render(request,'index.html')
-        return render(request,'forms.html', {'form':form})
-    return render(request,'forms.html', {'form':form})
-
-def formularioLicor(request):
-    form = formularioLicor()
-    if request.method=='POST':
-        form = formularioLicor(request.POST)
-        if form.is_valid():
-            user = request.user
-            formulario = Formulario.objects.get(ususario=user)
+            graduacionMaxima = form.cleaned_data['graduacionMaxima']
+            formulario.comentario=comentario
+            formulario.precioMinimo=precioMinimo
+            formulario.precioMaximo=precioMaximo
+            formulario.graduacionMinima=graduacionMinima
+            formulario.graduacionMaxima=graduacionMaxima
+            formulario.save()
             licor = form.cleaned_data['licor']
-            puntuacion = form.cleaned_data['puntuacion']
-            puntuacionCategoriaLicor =PuntuacionCategoriaLicor.objects.create(formulario=formulario,puntuacion=puntuacion,licor=licor)
-            return render(request,'forms.html')
-        return render(request,'forms.html', {'form':form})
-    return render(request,'forms.html', {'form':form})
-
-def formularioOrigen(request):
-    form = formularioLicor()
-    if request.method=='POST':
-        form = formularioLicor(request.POST)
-        if form.is_valid():
-            user = request.user
-            formulario = Formulario.objects.get(ususario=user)
+            puntuacionL = form.cleaned_data['puntuacionLicor']
+            if (licor and puntuacionL):  
+                puntuacionLicor = PuntuacionCategoriaLicor.objects.create(licor=licor,puntuacion=puntuacionL,formulario=formulario)             
             origen = form.cleaned_data['origen']
-            puntuacion = form.cleaned_data['puntuacion']
-            puntuacionOrigenLicor =PuntuacionOrigenLicor.objects.create(formulario=formulario,puntuacion=puntuacion,origen=origen)
-            return render(request,'forms.html')
-        return render(request,'forms.html', {'form':form})
-    return render(request,'forms.html', {'form':form})
-
-def formularioMarca(request):
-    form = formularioLicor()
-    if request.method=='POST':
-        form = formularioLicor(request.POST)
-        if form.is_valid():
-            user = request.user
-            formulario = Formulario.objects.get(ususario=user)
+            puntuacionO = form.cleaned_data['puntuacionOrigen']
+            if (origen and puntuacionO):  
+                puntuacionOrigen = PuntuacionOrigenLicor.objects.create(origen=origen,puntuacion=puntuacionO,formulario=formulario)
             marca =form.cleaned_data['marca']
-            puntuacion = form.cleaned_data['puntuacion'] 
-            puntuacionMarcaLicor = PuntuacionMarcaLicor.objects.create(formulario=formulario,puntuacion=puntuacion,marca=marca)
-            return render(request,'forms.html')
+            puntuacionM = form.cleaned_data['puntuacionMarca']
+            if (marca and puntuacionM):  
+                puntuacionMarca = PuntuacionMarcaLicor.objects.create(marca=marca,puntuacion=puntuacionM,formulario=formulario)
+            return redirect("/user/forms")
         return render(request,'forms.html', {'form':form})
-    return render(request,'forms.html', {'form':form})
+    return render(request,'forms.html', {'form':form,"catLicor":catLicor,"marcaLicor":marcaLicor,"origenLicor":origenLicor})
 
 @login_required
 def logoutUsuario(request):

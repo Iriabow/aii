@@ -1,5 +1,12 @@
 <meta charset="UTF-8">
+{% load static %}
 <style>
+body {
+ background-image: url("https://www.publicdomainpictures.net/pictures/210000/velka/natural-wood-grain-background-14903911355WD.jpg");
+ background-color: #FAD887;
+ font-size: 13pt;
+ font-family: sans-serif;
+}
 ul.menu {
   list-style-type: none;
   margin: 0;
@@ -7,7 +14,12 @@ ul.menu {
   overflow: hidden;
   background-color: #333;
 }
-
+.center {
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+  background-image:url("static/tabla.jpg"); 
+}
 li.menu_option {
   float: left;
 }
@@ -30,10 +42,45 @@ li a.option:hover {
 .error{
 color: red;
 }
-table {
-  border-collapse: collapse;
-}
 
+table {
+  background-image: url("static/tabla.jpg"); 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  border-collapse: collapse;
+  margin:5px;
+  font-size: 14pt;
+  
+}
+.preferencias_left{
+display: block;
+display: inline-block;
+float:left;
+margin:5px
+}
+.preferencias_center{
+display: block;
+display: inline-block;
+float:left;
+margin:5px
+}
+.preferencias_right{
+display: block;
+display: inline-block;
+float:left;
+margin:5px
+}
+.search{
+ background-color: #FAD887;
+ display: inline-block;
+ float:left;
+ margin:5px
+ 
+}
+.image_search{
+float:right;
+}
 table, td, th {
   border: 1px solid black;
   text-align: center;
@@ -42,9 +89,7 @@ table, td, th {
 .description{
     color: blue;
 }
-li {
-    list-style-type: none;
-}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -83,8 +128,15 @@ li {
   visibility: visible;
   opacity: 1;
 }
+.green{
+color:green;
+}
+.red{
+color:red;
+}
 </style>
 <header>
+<div><img src/></div>
 
 <nav>
 	<ul class="menu">
@@ -96,7 +148,7 @@ li {
 		{%endif%}
 		{% if user.is_authenticated %}
 		<li class="menu_option"><a class="option" href="/user/forms">Formulario</a></li>
-		<li class="menu_option"><a class="option" href="/licor/recomendation">Recomendation</a></li>
+		<li class="menu_option"><a class="option" href="/licor/recomendation">Recomendación</a></li>
 		<li class="menu_option"><a class="option" href="/user/logout">Logout</a></li>
 		{%endif%}
 	</ul>

@@ -6,6 +6,7 @@
 <header>
 {% include 'header.html' %}
 
+<div class="center">
 <h1>Entre en el sistema</h1>
 <p><a class="error">{{error}}</a></p>
 <form id='form' method='post'>
@@ -13,5 +14,6 @@
 {{form.as_p}}
 <p><input type='submit' value='Login'/></p>
 </form>
+</div>
 </body>
 </html>

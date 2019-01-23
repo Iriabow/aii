@@ -20,7 +20,7 @@ def generaRecomendaciones(idFormulario):
         for licor in Licor.objects.all():
             recomendaciones.update(getPuntuacionLicor(form, licor))
             
-        sorted(recomendaciones.items(), key=lambda p: p[1])
+        veinteMejores = sorted(recomendaciones.items(), key=lambda p: p[1],reverse=True)[0,19]
         
     else:
         return 0
