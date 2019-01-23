@@ -96,6 +96,14 @@
   }
 },
 {
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "usuario",
+    "model": "recomendaciones"
+  }
+},
+{
   "model": "sessions.session",
   "pk": "qxr6gz8ikzq76nxee1vqamxn7b9zt12e",
   "fields": {
@@ -53454,6 +53462,42 @@
     "name": "Can view puntuacion origen licor",
     "content_type": 12,
     "codename": "view_puntuacionorigenlicor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add recomendaciones",
+    "content_type": 13,
+    "codename": "add_recomendaciones"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change recomendaciones",
+    "content_type": 13,
+    "codename": "change_recomendaciones"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete recomendaciones",
+    "content_type": 13,
+    "codename": "delete_recomendaciones"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view recomendaciones",
+    "content_type": 13,
+    "codename": "view_recomendaciones"
   }
 },
 {
