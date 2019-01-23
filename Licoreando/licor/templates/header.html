@@ -1,9 +1,7 @@
 <meta charset="UTF-8">
-{% load static %}
 <style>
 body {
- background-image: url("https://www.publicdomainpictures.net/pictures/210000/velka/natural-wood-grain-background-14903911355WD.jpg");
- background-color: #FAD887;
+ /*background-image: url("https://www.publicdomainpictures.net/pictures/210000/velka/natural-wood-grain-background-14903911355WD.jpg");*/
  font-size: 13pt;
  font-family: sans-serif;
 }
@@ -18,7 +16,7 @@ ul.menu {
   margin: auto;
   width: 20%;
   padding: 10px;
-  background-image:url("static/tabla.jpg"); 
+  background-color: #FAD887;
 }
 li.menu_option {
   float: left;
@@ -41,17 +39,6 @@ li a.option:hover {
 }
 .error{
 color: red;
-}
-
-table {
-  background-image: url("static/tabla.jpg"); 
-  background-position: center; 
-  background-repeat: no-repeat; 
-  background-size: cover; 
-  border-collapse: collapse;
-  margin:5px;
-  font-size: 14pt;
-  
 }
 .preferencias_left{
 display: block;
@@ -85,6 +72,14 @@ table, td, th {
   border: 1px solid black;
   text-align: center;
   word-wrap: break-word;
+  margin:5px;
+  font-size: 13pt;
+}
+.search,.center, table{
+  background-image: url("https://raw.githubusercontent.com/Iriabow/aii/master/Licoreando/static/tabla.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .description{
     color: blue;
@@ -134,9 +129,12 @@ color:green;
 .red{
 color:red;
 }
+.banner{
+  width: 100%;
+}
 </style>
 <header>
-<div><img src/></div>
+<div class="banner"><img src="https://raw.githubusercontent.com/Iriabow/aii/master/Licoreando/static/search.jpg"/></div>
 
 <nav>
 	<ul class="menu">
@@ -148,7 +146,7 @@ color:red;
 		{%endif%}
 		{% if user.is_authenticated %}
 		<li class="menu_option"><a class="option" href="/user/forms">Formulario</a></li>
-		<li class="menu_option"><a class="option" href="/licor/recomendation">Recomendación</a></li>
+		<li class="menu_option"><a class="option" href="/user/recomendation">Recomendación</a></li>
 		<li class="menu_option"><a class="option" href="/user/logout">Logout</a></li>
 		{%endif%}
 	</ul>

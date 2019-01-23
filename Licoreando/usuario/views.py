@@ -3,9 +3,11 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 
+from licor.models import Licor
+from recomendaciones.recomendaciones import generaRecomendaciones
 from usuario.forms import Registro, Login, FormularioPreferencias
 from usuario.models import Formulario, PuntuacionCategoriaLicor, \
-    PuntuacionOrigenLicor, PuntuacionMarcaLicor
+    PuntuacionOrigenLicor, PuntuacionMarcaLicor, Recomendaciones
 
 
 def registro(request):
@@ -42,7 +44,6 @@ def loginUsuario(request):
         return render(request,'login.html', {'form':form,'error':error})
     return render(request,'login.html', {'form':form})
 
-
 def formularios(request):
     user = request.user
     formulario = Formulario.objects.get(usuario=user)
@@ -76,9 +77,20 @@ def formularios(request):
             puntuacionM = form.cleaned_data['puntuacionMarca']
             if (marca and puntuacionM):  
                 puntuacionMarca = PuntuacionMarcaLicor.objects.create(marca=marca,puntuacion=puntuacionM,formulario=formulario)
+            
+            generaRecomendaciones(formulario.id)
             return redirect("/user/forms")
         return render(request,'forms.html', {'form':form})
     return render(request,'forms.html', {'form':form,"catLicor":catLicor,"marcaLicor":marcaLicor,"origenLicor":origenLicor})
+
+def recomendaciones(request):
+    user = request.user
+    formulario = Formulario.objects.get(usuario=user)
+    recomendaciones = Recomendaciones.objects.filter(formulario=formulario)
+    licores = []
+    for r in recomendaciones:
+        licores.append(Licor.objects.get(id=r.recomendado))
+    return render(request,'recomendation.html',{'licores':licores})
 
 @login_required
 def logoutUsuario(request):
