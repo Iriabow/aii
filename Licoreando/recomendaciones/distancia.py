@@ -56,8 +56,9 @@ def filtrarPalabrasSinSignificado(frase):
 def getLevenshteinDistance(word1,word2):
     return levenshtein(word1,word2)
 
-def getLevenshteinWordsCount(toCompare,wordsDict,distance=2):
+def getLevenshteinWordsCount(toCompare,wordsDict,distance=1):
     count = 0
+    distance = round(len(toCompare)/4)
     for key, value in wordsDict.items():
         d=getLevenshteinDistance(toCompare, key)
         if(d<=distance):
@@ -88,8 +89,3 @@ def getPuntuacionRango(valor,mini,maxi):
         puntuacion=puntuacion*2
         
     return puntuacion
-
-
-        
-        
-        

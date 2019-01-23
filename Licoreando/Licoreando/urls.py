@@ -29,7 +29,7 @@ urlpatterns = [
     path('user/login', uview.loginUsuario),
     path('user/logout', uview.logoutUsuario),
     path('user/forms', uview.formularios),
-    path('licor/recomendation', lview.recomendacion)
+    path('user/recomendation', uview.recomendaciones)
 ]
 
 
