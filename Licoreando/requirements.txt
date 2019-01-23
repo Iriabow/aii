@@ -13,3 +13,6 @@ gunicorn
 psycopg2-binary==2.7.6.1
 python-gettext==4.0
 Whoosh == 2.7.4
+Distance
+stop-words
+Unidecode
