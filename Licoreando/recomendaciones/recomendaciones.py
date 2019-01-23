@@ -10,18 +10,19 @@ django.setup()
 
 from licor.models  import Licor, Categoria
 from django.contrib.auth.models import User
-from usuario.models import Formulario, PuntuacionCategoriaLicor, PuntuacionMarcaLicor, PuntuacionOrigenLicor
+from usuario.models import Formulario, PuntuacionCategoriaLicor, PuntuacionMarcaLicor, PuntuacionOrigenLicor, Recomendaciones
 
 
 def generaRecomendaciones(idFormulario):
     form = Formulario.objects.filter(pk = idFormulario).first()
     if form:
-        recomendaciones={}
+        recomendacionesDict={}
         for licor in Licor.objects.all():
-            recomendaciones.update(getPuntuacionLicor(form, licor))
+            recomendacionesDict.update(getPuntuacionLicor(form, licor))
             
-        veinteMejores = sorted(recomendaciones.items(), key=lambda p: p[1],reverse=True)[0,19]
-        
+        veinteMejores = sorted(recomendacionesDict.items(), key=lambda p: p[1],reverse=True)[0,19]
+        for mejor in veinteMejores:
+            Recomendaciones.objects.create(recomendado=mejor[0],formulario=form)
     else:
         return 0
     
