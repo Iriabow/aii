@@ -3,7 +3,10 @@ from django import forms
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models.query import QuerySet
 from django.utils.translation import gettext_lazy as _
+
+from usuario.models import Formulario
 
 
 class Registro(forms.Form):
@@ -11,8 +14,8 @@ class Registro(forms.Form):
     Nombre = forms.CharField(max_length=30)
     Apellido = forms.CharField(max_length=60)
     Email = forms.CharField(required=False)
-    Contraseña1 = forms.CharField(widget=forms.PasswordInput)
-    Contraseña2 = forms.CharField(widget=forms.PasswordInput)
+    Contraseña1 = forms.CharField(widget=forms.PasswordInput,label="Contraseña")
+    Contraseña2 = forms.CharField(widget=forms.PasswordInput,label="Repetir contraseña")
    
     def clean(self):
         cleaned_data = super().clean()
@@ -51,19 +54,14 @@ class Login(forms.Form):
             
 class FormularioPreferencias(forms.Form):
     precioMinimo = forms.FloatField(required=False, label="Precio Mínimo")
-    precioMaximo = forms.FloatField(required=False,label="Precio Máximo")
+    precioMaximo = forms.FloatField(required=False, label="Precio Máximo")
     graduacionMinima = forms.FloatField(required=False,label="Graduación Mínima")
     graduacionMaxima = forms.FloatField(required=False,label="Graduación Máxima")
-    comentario = forms.CharField(widget=forms.Textarea,required=False)
+    comentario = forms.CharField(widget=forms.Textarea,required=False,label="Comentario")
+    licor = forms.CharField(required=False,label="Tipo de licor")
+    puntuacionLicor = forms.IntegerField(required=False,min_value=0, max_value=10,label="Puntuación del licor")
+    origen = forms.CharField(required=False,label="Origen")
+    puntuacionOrigen = forms.IntegerField(required=False,min_value=0, max_value=10,label="Puntuación del origen")
+    marca =forms.CharField(required=False,label="Marca")
+    puntuacionMarca = forms.IntegerField(required=False,min_value=0, max_value=10,label="Puntuación de la marca")
 
-class FormularioLicor(forms.Form):
-    licor = forms.CharField()
-    puntuacion = forms.IntegerField(min_value=0, max_value=10)
-    
-class FormularioOrigen(forms.Form):
-    origen = forms.CharField()
-    puntuacion = forms.IntegerField(min_value=0, max_value=10)
-
-class FormularioMarca(forms.Form):
-    marca =forms.CharField()
-    puntuacion = forms.IntegerField(min_value=0, max_value=10)

@@ -4,15 +4,13 @@ from django.template.defaultfilters import lower
 from licor.forms import SearchForm
 from licor.models import Licor, Categoria
 from whooshLicor.utils import listarPorAtributo
-from scipy.constants.constants import elementary_charge
-
 
 def index(request): 
     return render(request,'index.html')
 
 def buscarLicor(request):
     form=SearchForm()
-    categorias = Categoria.objects.all()
+    categorias = Categoria.objects.all().order_by('nombre')
     if request.method=='POST':
         form = SearchForm(request.POST, request.FILES)
         if form.is_valid():

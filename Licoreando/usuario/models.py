@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
-# Create your models here.
 
+# Create your models here.
 class Formulario(models.Model):
     usuario = models.OneToOneField(User, blank = False, null = False, on_delete= models.CASCADE)
     comentario = models.TextField(blank = True, null = True)
@@ -10,6 +10,10 @@ class Formulario(models.Model):
     precioMaximo = models.FloatField(blank = True, null = True)
     graduacionMinima = models.FloatField(blank = True, null = True)
     graduacionMaxima = models.FloatField(blank = True, null = True)
+
+class Recomendaciones(models.Model):
+    recomendado = models.IntegerField(blank = False, null = False)
+    formulario = models.ForeignKey(Formulario,blank = False, null = False, on_delete = models.CASCADE)
     
 class PuntuacionCategoriaLicor(models.Model):
     licor = models.TextField()

@@ -20,6 +20,7 @@ from django.urls import path
 from licor import views as lview
 from usuario import views as uview
 
+
 urlpatterns = [
     path('', lview.index),
     path('admin/', admin.site.urls),
@@ -27,7 +28,7 @@ urlpatterns = [
     path('user/register', uview.registro),
     path('user/login', uview.loginUsuario),
     path('user/logout', uview.logoutUsuario),
-    path('user/forms', uview.formularioPreferencias),
+    path('user/forms', uview.formularios),
     path('licor/recomendation', lview.recomendacion)
 ]
 
