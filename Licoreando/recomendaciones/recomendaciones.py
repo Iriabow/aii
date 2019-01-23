@@ -19,8 +19,10 @@ def generaRecomendaciones(idFormulario):
         recomendacionesDict={}
         for licor in Licor.objects.all():
             recomendacionesDict.update(getPuntuacionLicor(form, licor))
-            
-        veinteMejores = sorted(recomendacionesDict.items(), key=lambda p: p[1],reverse=True)[0,19]
+        
+        veinteMejores = sorted(recomendacionesDict.items(), key=lambda p: p[1],reverse=True)[0:20]
+        print(veinteMejores)
+        Recomendaciones.objects.filter(formulario=form).delete()
         for mejor in veinteMejores:
             Recomendaciones.objects.create(recomendado=mejor[0],formulario=form)
     else:
@@ -30,19 +32,23 @@ def generaRecomendaciones(idFormulario):
 
 def getPuntuacionLicor(form,licor):
     puntuacion = 0.0
-    puntuacion=puntuacion+getPuntuacionFrase(form.comentario,licor.descripcion)
-    puntuacion=puntuacion+getPuntuacionRango(licor.precio,form.precioMinimo,form.precioMaximo)
-    puntuacion=puntuacion+getPuntuacionRango(licor.graduacion,form.graduacionMinima,form.graduacionMaxima)
+
+    if form.comentario and licor.descripcion:
+        puntuacion=puntuacion+getPuntuacionFrase(form.comentario,licor.descripcion)
+    if licor.precio and form.precioMinimo and form.precioMaximo:
+        puntuacion=puntuacion+getPuntuacionRango(licor.precio,form.precioMinimo,form.precioMaximo)
+    if licor.graduacion and form.graduacionMinima and form.graduacionMaxima:
+        puntuacion=puntuacion+getPuntuacionRango(licor.graduacion,form.graduacionMinima,form.graduacionMaxima)
     
-    for categoriaF in form.puntuacionCategoriaLicor_set.all():
+    for categoriaF in form.puntuacioncategorialicor_set.all():
         for categoriaL in licor.categoria_set.all():
             puntuacion=puntuacion+getPuntuacionAtributo(categoriaF.licor, categoriaL.nombre, categoriaF.puntuacion)
             
-    for origenF in form.puntuacionOrigenLicor_set.all():
+    for origenF in form.puntuacionorigenlicor_set.all():
         puntuacion=puntuacion+getPuntuacionAtributo(origenF.origen,licor.origen, origenF.puntuacion)
         
-    for marcaF in form.puntuacionMarcaLicor_set.all():
+    for marcaF in form.puntuacionmarcalicor_set.all():
         puntuacion=puntuacion+getPuntuacionAtributo(marcaF.marca,licor.titulo, marcaF.puntuacion)
-        
-    return {licor.i:puntuacion}
+    
+    return {licor.id:puntuacion}
     

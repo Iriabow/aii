@@ -57,14 +57,15 @@
     </td> 
     <td><div class="tooltip">
     {%if not licor.descripcion == "" %}
-        <a class="description">Descripción</a><span class="tooltiptext">{{licor.descripcion}}</span></div></td>
+        <a class="description">Descripción</a><span class="tooltiptext">{{licor.descripcion}}</span></div>
     {%endif%}
     {%if licor.descripcion == "" %}
-        <a>---</a></td>
+        <a>---</a>
     {%endif%}
+  </td>
     <td>
     {% if not licor.precio == "" %}
-    	{{licor.precio}}€</td>
+    	{{licor.precio}}€
     {%endif%}
     {% if licor.precio == "" %}
     	Desconocido
@@ -72,7 +73,7 @@
     </td>
     <td>
     {% if not licor.origen == "" %}
-    	{{licor.origen}}</td>
+    	{{licor.origen}}
     {%endif%}
     {% if licor.origen == "" or licor.origen == "Desconocido" %}
     	No disponible
@@ -80,7 +81,7 @@
     </td> 
     <td>
     {% if not licor.cantidad == "" %}
-    	{{licor.cantidad}}</td>
+    	{{licor.cantidad}}
     {%endif%}
     {% if licor.cantidad == "" %}
     	No disponible
@@ -88,7 +89,7 @@
     </td>
     <td>
     {% if not licor.graduacion == "" %}
-    	{{licor.graduacion}}º</td>
+    	{{licor.graduacion}}º
     {%endif%}
     {% if licor.graduacion == "" %}
     	No disponible
@@ -99,7 +100,7 @@
     <p>{{cate.nombre}}</p>
     {% endfor %}
     </td>
-    <td><a href="{{licor.urlProducto}}">Enlace</a></td>
+    <td><a href="{{licor.urlProducto}}" target="_blank">Enlace</a></td>
     {% if licor.enStock == True %}
     	<td><a class="green">En stock</a></td>
     {%endif%}
